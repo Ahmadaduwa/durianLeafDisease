@@ -3,1025 +3,914 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ทำนายโรคใบทุเรียน — AI Analysis Dashboard</title>
+  <title>ทำนายโรคใบทุเรียน — AI Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      margin: 0; padding: 0; 
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); 
-      color: #e2e8f0; 
+    /* ==================== ROOT VARIABLES ==================== */
+    :root {
+      --bg-1: #0f172a;
+      --bg-2: #1e293b;
+      --card: #1f2a44;
+      --accent-start: #22c55e;
+      --accent-end: #16a34a;
+      --muted: #94a3b8;
+      --glass: rgba(255,255,255,0.05);
+      --success: #22c55e;
+      --danger: #ef4444;
+      --radius: 16px;
+      --gap: 20px;
+      --max-width: 1280px;
+      --shadow: 0 8px 24px rgba(0,0,0,0.3);
+      --shadow-hover: 0 12px 32px rgba(0,0,0,0.4);
+    }
+
+    /* ==================== BASE STYLES ==================== */
+    * { 
+      box-sizing: border-box; 
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
+      color: #e6eef8;
       min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
     }
-    .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
-    
-    /* Header */
-    .header { text-align: center; margin-bottom: 30px; }
-    .header h1 { 
-      margin: 0 0 10px; font-size: 36px; 
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 40px auto;
+      padding: 24px;
     }
-    .header p { color: #cbd5e1; font-size: 16px; }
-    
-    /* Tabs */
-    .tabs { 
-      display: flex; gap: 0; margin-bottom: 20px; 
-      background: #1e293b; border-radius: 12px; padding: 4px;
-      overflow-x: auto;
+
+    /* ==================== HEADER SECTION ==================== */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 32px;
     }
-    .tab { 
-      flex: 1; padding: 12px 20px; text-align: center; cursor: pointer; 
-      border-radius: 8px; transition: all 0.3s ease;
-      font-weight: 600; white-space: nowrap; min-width: 120px;
+
+    .title {
+      font-size: 28px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    .tab.active { 
-      background: linear-gradient(135deg, #22c55e, #16a34a); 
-      color: white; box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 400;
     }
-    .tab:not(.active):hover { background: #2d3748; }
-    
-    /* Content panels */
-    .panel { display: none; }
-    .panel.active { display: block; }
-    
-    /* Input methods */
-    .input-methods {
-      display: flex; gap: 12px; margin-bottom: 20px;
+
+    /* ==================== LAYOUT GRID ==================== */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 24px;
     }
-    .method-btn {
-      flex: 1; padding: 12px 16px; border: 2px solid #334155;
-      background: #111827; color: #e2e8f0; border-radius: 8px;
-      cursor: pointer; transition: all 0.3s ease; text-align: center;
+
+    @media (max-width: 1024px) {
+      .grid { 
+        grid-template-columns: 1fr; 
+      }
+      .header { 
+        flex-direction: column; 
+        align-items: flex-start; 
+      }
     }
-    .method-btn.active {
-      border-color: #22c55e; background: rgba(34, 197, 94, 0.1);
-      color: #22c55e;
+
+    /* ==================== CARD COMPONENTS ==================== */
+    .card {
+      background: var(--card);
+      padding: 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .method-btn:hover:not(.active) {
-      border-color: #475569; background: #1e293b;
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
     }
-    
-    /* Uploader */
-    .uploader { 
-      border: 2px dashed #334155; border-radius: 12px; padding: 30px; 
-      text-align: center; background: #111827; cursor: pointer; 
-      transition: all 0.3s ease; margin-bottom: 20px;
-    }
-    .uploader.dragover { 
-      border-color: #22c55e; background: #0b1220; 
-      box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
-    }
-    .uploader input[type="file"] { display: none; }
-    .uploader-icon { font-size: 48px; margin-bottom: 16px; opacity: 0.7; }
-    
-    /* Camera */
-    .camera-container {
-      background: #111827; border-radius: 12px; padding: 20px;
-      margin-bottom: 20px; text-align: center;
-    }
-    .camera-preview {
-      position: relative; display: inline-block; border-radius: 8px;
-      overflow: hidden; max-width: 100%;
-    }
-    .camera-preview video, .camera-preview canvas {
-      display: block; width: 100%; max-width: 500px; height: auto;
-      border-radius: 8px;
-    }
-    .camera-controls {
-      margin-top: 16px; display: flex; justify-content: center;
-      gap: 12px; flex-wrap: wrap;
-    }
-    .camera-btn {
-      padding: 8px 16px; background: #334155; border: none;
-      color: #e2e8f0; border-radius: 6px; cursor: pointer;
-      transition: all 0.3s ease; font-size: 14px;
-    }
-    .camera-btn:hover { background: #475569; }
-    .camera-btn.primary {
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: white; font-weight: 600;
-    }
-    .camera-btn:disabled {
-      opacity: 0.5; cursor: not-allowed;
-    }
-    
-    /* Preview and Results */
-    .analysis-section {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+
+    /* ==================== BUTTONS & CONTROLS ==================== */
+    .controls {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
       margin-bottom: 20px;
     }
-    .image-panel, .results-panel {
-      background: #1e293b; border-radius: 12px; padding: 20px;
+
+    .btn {
+      background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .image-panel h3, .results-panel h3 {
-      margin: 0 0 16px; color: #22c55e;
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(34,197,94,0.3);
     }
-    .image-display {
-      text-align: center; margin-bottom: 16px;
+
+    .btn.ghost {
+      background: transparent;
+      border: 1px solid var(--glass);
+      color: var(--muted);
     }
-    .image-display img {
-      max-width: 100%; height: auto; border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+
+    .btn.ghost:hover {
+      background: var(--glass);
+      color: #fff;
     }
-    .image-tabs {
-      display: flex; gap: 8px; margin-bottom: 16px;
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
     }
-    .image-tab {
-      padding: 6px 12px; background: #334155; border: none;
-      color: #e2e8f0; border-radius: 6px; cursor: pointer;
-      font-size: 12px; transition: all 0.3s ease;
-    }
-    .image-tab.active {
-      background: #22c55e; color: white;
-    }
-    
-    /* Settings */
-    .settings-section {
-      background: #1e293b; border-radius: 12px; padding: 20px;
-      margin-bottom: 20px;
-    }
-    .settings-row {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 12px; padding: 8px 0;
-    }
-    .settings-row:last-child { margin-bottom: 0; }
-    .setting-label {
-      font-weight: 500; color: #cbd5e1;
-    }
-    .setting-control {
-      display: flex; align-items: center; gap: 8px;
-    }
-    .toggle-switch {
-      position: relative; width: 48px; height: 24px;
-      background: #475569; border-radius: 12px; cursor: pointer;
+
+    .method {
+      flex: 1;
+      padding: 12px;
+      border-radius: 10px;
+      background: var(--card);
+      border: 1px solid var(--glass);
+      text-align: center;
+      cursor: pointer;
       transition: all 0.3s ease;
     }
-    .toggle-switch.active {
-      background: #22c55e;
+
+    .method.active {
+      border-color: var(--accent-start);
+      background: linear-gradient(135deg, rgba(34,197,94,0.1), rgba(22,163,74,0.1));
+      color: var(--accent-start);
     }
-    .toggle-switch::after {
-      content: ''; position: absolute; top: 2px; left: 2px;
-      width: 20px; height: 20px; background: white;
-      border-radius: 50%; transition: all 0.3s ease;
+
+    .method:hover {
+      background: var(--glass);
+      transform: translateY(-2px);
     }
-    .toggle-switch.active::after {
-      transform: translateX(24px);
+
+    /* ==================== FILE UPLOADER ==================== */
+    .uploader {
+      text-align: center;
+      padding: 32px;
+      border: 2px dashed var(--glass);
+      border-radius: 12px;
+      background: var(--card);
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
-    
-    button { 
-      background: linear-gradient(135deg, #22c55e, #16a34a); 
-      border: none; color: white; padding: 12px 24px; 
-      font-weight: 700; border-radius: 8px; cursor: pointer; 
-      font-size: 16px; transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+
+    .uploader.drag {
+      border-color: var(--accent-start);
+      background: rgba(34,197,94,0.05);
+      box-shadow: 0 8px 24px rgba(34,197,94,0.2);
     }
-    button:hover:not(:disabled) { 
-      transform: translateY(-2px); 
-      box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
-    }
-    button:disabled { 
-      opacity: 0.6; cursor: not-allowed; 
-      transform: none; box-shadow: none;
-    }
-    
-    .prediction-row { 
-      display: flex; justify-content: space-between; align-items: center; 
-      padding: 12px 0; border-bottom: 1px dashed #1f2937;
-    }
-    .prediction-row:last-child { border-bottom: none; }
-    .prediction-label { font-weight: 700; min-width: 160px; }
-    .prob-bar { 
-      height: 12px; background: #253046; border-radius: 6px; 
-      overflow: hidden; margin: 0 16px; flex: 1; position: relative;
-    }
-    .prob-bar > i { 
-      display: block; height: 100%; 
-      background: linear-gradient(90deg, #22c55e, #16a34a); 
-      width: 0%; transition: width 0.8s ease;
-    }
-    .prob-percent { 
-      width: 60px; text-align: right; font-weight: 600;
-      color: #22c55e;
-    }
-    
-    /* Performance Dashboard */
-    .stats-grid { 
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-      gap: 20px; margin-bottom: 30px;
-    }
-    .stat-card { 
-      background: linear-gradient(135deg, #1e293b, #334155); 
-      padding: 24px; border-radius: 12px; text-align: center;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    }
-    .stat-card h3 { margin: 0 0 8px; font-size: 14px; opacity: 0.8; }
-    .stat-card .value { 
-      font-size: 32px; font-weight: bold; margin: 8px 0;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .stat-card .unit { font-size: 14px; opacity: 0.7; }
-    .stat-card.error .value { color: #ef4444; }
-    .stat-card.warning .value { color: #f59e0b; }
-    
-    .charts-section { margin-bottom: 30px; }
-    .chart-container { 
-      background: #1e293b; padding: 20px; border-radius: 12px; 
-      margin-bottom: 20px;
-    }
-    .chart-title { margin: 0 0 20px; color: #22c55e; font-size: 18px; }
-    
-    /* Error logs */
-    .error-log { 
-      background: #1e293b; padding: 16px; border-radius: 8px; 
-      margin: 8px 0; border-left: 4px solid #ef4444;
-    }
-    .error-time { color: #94a3b8; font-size: 12px; }
-    .error-msg { color: #fca5a5; margin-top: 4px; }
-    
-    /* Class distribution */
-    .class-item { 
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 8px 0; border-bottom: 1px dashed #334155;
-    }
-    .class-item:last-child { border-bottom: none; }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .container { padding: 15px; }
-      .analysis-section { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: 1fr; }
-      .tabs { flex-direction: column; }
-      .input-methods { flex-direction: column; }
-      .camera-controls { justify-content: center; }
-    }
-    
-    /* Loading animation */
-    .loading { 
-      display: inline-block; width: 20px; height: 20px; 
-      border: 2px solid #334155; border-radius: 50%; 
-      border-top-color: #22c55e; animation: spin 1s ease-in-out infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    
-    /* Success/Error indicators */
-    .status { padding: 8px 12px; border-radius: 6px; font-size: 14px; }
-    .status.success { background: rgba(34, 197, 94, 0.1); color: #22c55e; }
-    .status.error { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
-    .status.warning { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
-    
-    /* File info */
+
     .file-info {
-      background: #111827; border-radius: 8px; padding: 16px;
-      margin-bottom: 16px; font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 14px;
     }
-    .file-info-row {
-      display: flex; justify-content: space-between;
-      margin-bottom: 8px;
+
+    /* ==================== IMAGE & CANVAS AREA ==================== */
+    .image-area {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
-    .file-info-row:last-child { margin-bottom: 0; }
-    
-    /* Timing info */
-    .timing-info {
-      background: #111827; border-radius: 8px; padding: 16px;
-      margin-top: 16px; font-size: 14px;
+
+    .canvas-wrap {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      padding: 16px;
+      box-shadow: var(--shadow);
+      min-height: 300px;
     }
-    .timing-row {
-      display: flex; justify-content: space-between;
-      margin-bottom: 6px;
+
+    @media (max-width: 768px) {
+      .canvas-wrap { 
+        grid-template-columns: 1fr; 
+      }
     }
-    .timing-row:last-child { margin-bottom: 0; }
+
+    .canvas-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111827;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    canvas {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .canvas-label {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .canvas-placeholder {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 12px 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      pointer-events: none;
+      text-align: center;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* ==================== SIDEBAR COMPONENTS ==================== */
+    .side {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Prediction Results */
+    .pred-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .pred-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px;
+      background: var(--glass);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .pred-row:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-2px);
+    }
+
+    .pred-label {
+      min-width: 160px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .bar {
+      flex: 1;
+      height: 12px;
+      background: #12202b;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .bar > i {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+      transition: width 0.8s ease-in-out;
+    }
+
+    .pred-percent {
+      width: 60px;
+      text-align: right;
+      color: var(--accent-start);
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    /* Performance Metrics */
+    .timing {
+      background: var(--card);
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      font-size: 14px;
+    }
+
+    /* ==================== UTILITY CLASSES ==================== */
+    .small { 
+      font-size: 14px; 
+      color: var(--muted); 
+    }
+
+    .muted { 
+      color: var(--muted); 
+      font-size: 14px; 
+    }
+
+    .status {
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .status.ok {
+      background: rgba(34,197,94,0.15);
+      color: var(--success);
+    }
+
+    .status.err {
+      background: rgba(239,68,68,0.15);
+      color: var(--danger);
+    }
+
+    /* ==================== FOOTER ==================== */
+    footer {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+      opacity: 0.8;
+    }
+
+    /* ==================== ANIMATIONS ==================== */
+    @keyframes fadeIn {
+      from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease-out;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="wrap">
+    <!-- ==================== HEADER ==================== -->
     <div class="header">
-      <h1>🌿 ระบบทำนายโรคใบทุเรียน</h1>
-      <p>AI-Powered Durian Leaf Disease Detection with Grad-CAM Visualization</p>
+      <div>
+        <div class="title">🌿 ระบบทำนายโรคใบทุเรียน</div>
+        <div class="subtitle">AI-powered detection with Grad-CAM visualization</div>
+      </div>
+      <div class="muted">เซิร์ฟเวอร์: <span id="server-status" class="status">กำลังตรวจสอบ...</span></div>
     </div>
 
-    <div class="tabs">
-      <div class="tab active" onclick="switchTab('predict')">🔍 ทำนาย</div>
-      <div class="tab" onclick="switchTab('performance')">📊 Performance</div>
-      <div class="tab" onclick="switchTab('logs')">📋 Logs</div>
+    <!-- ==================== MAIN GRID ==================== -->
+    <div class="grid">
+      <!-- LEFT COLUMN: Upload / Camera / Image -->
+      <div>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+            <strong>อัปโหลดหรือถ่ายภาพ</strong>
+            <div class="small">รองรับ JPG, PNG, BMP, WebP</div>
+          </div>
+
+          <!-- Control Buttons -->
+          <div class="controls">
+            <div id="btn-file" class="method active" onclick="switchInput('file')">📁 อัปโหลด</div>
+            <div id="btn-camera" class="method" onclick="switchInput('camera')">📷 กล้อง</div>
+            <button id="predict-btn" class="btn" style="min-width:160px" disabled onclick="predict()">🚀 ทำนาย</button>
+            <button id="clear-btn" class="btn ghost" onclick="resetUI()">รีเซ็ท</button>
+          </div>
+
+          <!-- File Uploader -->
+          <div id="uploader" class="uploader" title="ลากแล้วปล่อย หรือคลิกเพื่อเลือกไฟล์">
+            <input id="file-input" type="file" accept="image/*" style="display:none">
+            <div style="font-size:32px">📸</div>
+            <div style="font-weight:600;margin-top:8px">ลากและวางไฟล์ที่นี่ หรือคลิกเพื่อเลือก</div>
+            <div class="file-info">
+              <div id="file-name">ยังไม่ได้เลือกไฟล์</div>
+              <div id="file-size" class="muted"></div>
+            </div>
+          </div>
+
+          <!-- Camera Area -->
+          <div id="camera-area" style="display:none;margin-top:16px">
+            <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
+              <button id="start-camera" class="btn ghost" onclick="startCamera()">🟢 เปิดกล้อง</button>
+              <button id="capture" class="btn" onclick="captureImage()" disabled>📸 ถ่าย</button>
+              <button id="stop-camera" class="btn ghost" onclick="stopCamera()" style="display:none">🔴 ปิด</button>
+            </div>
+            <video id="camera-video" autoplay playsinline style="width:100%;border-radius:12px;display:none"></video>
+            <canvas id="camera-canvas" style="display:none;width:100%;border-radius:12px"></canvas>
+          </div>
+
+          <!-- Image Display Area -->
+          <div class="image-area" style="margin-top:20px">
+            <div class="canvas-wrap card">
+              <div class="canvas-container">
+                <canvas id="orig-canvas"></canvas>
+              </div>
+              <div class="canvas-container">
+                <canvas id="heatmap-canvas"></canvas>
+              </div>
+              <div id="canvas-placeholder" class="canvas-placeholder">ยังไม่มีรูป — อัปโหลดหรือถ่ายรูป</div>
+            </div>
+
+            <div class="image-controls">
+              <button id="dl-original" class="btn ghost" onclick="downloadOriginal()">ดาวน์โหลดภาพต้นฉบับ</button>
+              <button id="dl-heatmap" class="btn ghost" onclick="downloadHeatmap()" style="display:none">ดาวน์โหลด Heatmap</button>
+            </div>
+
+            <div id="gradcam-warning" class="muted" style="text-align:center;display:none;padding:12px"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Predictions + Performance + System -->
+      <aside class="side">
+        <!-- Prediction Results -->
+        <div class="card">
+          <strong>ผลการทำนาย</strong>
+          <div id="prediction-results" class="pred-list" style="min-height:160px">
+            <div class="muted" style="padding:16px;text-align:center">กดปุ่ม "ทำนาย" เพื่อเริ่ม</div>
+          </div>
+        </div>
+
+        <!-- Performance Metrics -->
+        <div class="card timing">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <strong>ประสิทธิภาพ (ms)</strong>
+            <div class="small muted">รายละเอียดการประมวลผล</div>
+          </div>
+          <div class="metrics">
+            <div>ทั้งหมด: <span id="total-time" style="font-weight:600">-</span></div>
+            <div>Preprocess: <span id="pre-time" style="font-weight:600">-</span></div>
+            <div>Inference: <span id="inf-time" style="font-weight:600">-</span></div>
+            <div>Grad-CAM: <span id="gc-time" style="font-weight:600">-</span></div>
+          </div>
+        </div>
+
+        <!-- System Status -->
+        <div class="card">
+          <strong>สถานะระบบ</strong>
+          <div style="margin-top:12px" id="system-metrics">
+            <div class="muted">ข้อมูลระบบจะปรากฏที่นี่</div>
+          </div>
+        </div>
+      </aside>
     </div>
 
-    <!-- Predict Panel -->
-    <div class="panel active" id="predict-panel">
-      <!-- Settings Section -->
-      <div class="settings-section">
-        <h3 style="margin: 0 0 16px; color: #22c55e;">⚙️ การตั้งค่า</h3>
-        <div class="settings-row">
-          <span class="setting-label">🔍 Grad-CAM Analysis</span>
-          <div class="setting-control">
-            <div class="toggle-switch active" id="gradcam-toggle" onclick="toggleGradCAM()"></div>
-            <span id="gradcam-status">เปิด</span>
-          </div>
-        </div>
-        <div class="settings-row">
-          <span class="setting-label">📸 Mirror Camera</span>
-          <div class="setting-control">
-            <div class="toggle-switch" id="mirror-toggle" onclick="toggleMirror()"></div>
-            <span id="mirror-status">ปิด</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Input Methods -->
-      <div class="input-methods">
-        <div class="method-btn active" onclick="switchInputMethod('file')">
-          📁 อัปโหลดไฟล์
-        </div>
-        <div class="method-btn" onclick="switchInputMethod('camera')">
-          📷 ใช้กล้อง
-        </div>
-      </div>
-
-      <!-- File Upload -->
-      <div class="input-section" id="file-section">
-        <div class="uploader" id="dropzone">
-          <input type="file" id="file-input" accept="image/*" />
-          <div class="uploader-icon">📸</div>
-          <p><strong>ลากและวางรูป หรือคลิกเพื่อเลือกไฟล์</strong></p>
-          <p style="font-size: 14px; opacity: 0.7;">รองรับ: JPG, PNG, BMP, WebP</p>
-        </div>
-      </div>
-
-      <!-- Camera Section -->
-      <div class="input-section" id="camera-section" style="display: none;">
-        <div class="camera-container">
-          <div class="camera-preview">
-            <video id="camera-video" autoplay muted style="display: none;"></video>
-            <canvas id="camera-canvas" style="display: none;"></canvas>
-            <div id="camera-placeholder" style="padding: 60px 20px; background: #111827; border: 2px dashed #334155; border-radius: 8px;">
-              <div style="font-size: 48px; opacity: 0.5;">📷</div>
-              <p style="margin: 16px 0 8px; opacity: 0.8;">คลิก "เปิดกล้อง" เพื่อเริ่มใช้งาน</p>
-              <p style="font-size: 14px; opacity: 0.6;">ต้องอนุญาตการเข้าถึงกล้องในเบราว์เซอร์</p>
-            </div>
-          </div>
-          <div class="camera-controls">
-            <button class="camera-btn" id="start-camera-btn" onclick="startCamera()">🟢 เปิดกล้อง</button>
-            <button class="camera-btn" id="stop-camera-btn" onclick="stopCamera()" style="display: none;">🔴 ปิดกล้อง</button>
-            <button class="camera-btn primary" id="capture-btn" onclick="captureImage()" disabled>📸 ถ่ายรูป</button>
-            <button class="camera-btn" id="retake-btn" onclick="retakeImage()" style="display: none;">🔄 ถ่ายใหม่</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Analysis Section -->
-      <div class="analysis-section" id="analysis-section" style="display: none;">
-        <div class="image-panel">
-          <h3>🖼️ รูปภาพ</h3>
-          <div class="image-tabs">
-            <button class="image-tab active" onclick="switchImageView('original')">ต้นฉบับ</button>
-            <button class="image-tab" onclick="switchImageView('gradcam')" id="gradcam-tab" style="display: none;">Grad-CAM</button>
-          </div>
-          <div class="image-display">
-            <img id="original-image" alt="Original" />
-            <img id="gradcam-image" alt="Grad-CAM" style="display: none;" />
-          </div>
-          <div class="file-info" id="file-info">
-            <div class="file-info-row">
-              <strong>ชื่อไฟล์:</strong>
-              <span id="file-name">-</span>
-            </div>
-            <div class="file-info-row">
-              <strong>ขนาด:</strong>
-              <span id="file-size">-</span>
-            </div>
-            <div class="file-info-row">
-              <strong>สถานะ:</strong>
-              <span id="file-status" class="status">-</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="results-panel">
-          <h3>🎯 ผลการทำนาย</h3>
-          <div id="prediction-results">
-            <p style="opacity: 0.7; text-align: center;">กดปุ่ม "ทำนาย" เพื่อเริ่มวิเคราะห์</p>
-          </div>
-          <div class="timing-info" id="timing-info" style="display: none;">
-            <div class="timing-row">
-              <strong>⏱️ เวลาทั้งหมด:</strong>
-              <span id="total-time">-</span>
-            </div>
-            <div class="timing-row">
-              <strong>🔧 Preprocessing:</strong>
-              <span id="preprocess-time">-</span>
-            </div>
-            <div class="timing-row">
-              <strong>🧠 Inference:</strong>
-              <span id="inference-time">-</span>
-            </div>
-            <div class="timing-row" id="gradcam-timing" style="display: none;">
-              <strong>🔍 Grad-CAM:</strong>
-              <span id="gradcam-time">-</span>
-            </div>
-          </div>
-          <button id="predict-btn" onclick="predict()" style="width: 100%; margin-top: 16px;" disabled>
-            🚀 ทำนาย
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Performance Panel -->
-    <div class="panel" id="performance-panel">
-      <div class="stats-grid" id="stats-grid">
-        <div class="stat-card">
-          <h3>Total Predictions</h3>
-          <div class="value" id="total-predictions">-</div>
-          <div class="unit">requests</div>
-        </div>
-        <div class="stat-card">
-          <h3>Average Latency</h3>
-          <div class="value" id="avg-latency">-</div>
-          <div class="unit">ms</div>
-        </div>
-        <div class="stat-card">
-          <h3>Success Rate</h3>
-          <div class="value" id="success-rate">-</div>
-          <div class="unit">%</div>
-        </div>
-        <div class="stat-card">
-          <h3>Average Confidence</h3>
-          <div class="value" id="avg-confidence">-</div>
-          <div class="unit">%</div>
-        </div>
-        <div class="stat-card">
-          <h3>Grad-CAM Time</h3>
-          <div class="value" id="avg-gradcam-time">-</div>
-          <div class="unit">ms</div>
-        </div>
-      </div>
-
-      <div class="charts-section">
-        <div class="chart-container">
-          <h3 class="chart-title">📈 Class Distribution</h3>
-          <div id="class-distribution">
-            <p style="opacity: 0.7; text-align: center;">No data</p>
-          </div>
-        </div>
-
-        <div class="chart-container">
-          <h3 class="chart-title">⚡ Performance Metrics</h3>
-          <div id="performance-metrics">
-            <p>Min Latency: <span id="min-latency">-</span> ms</p>
-            <p>Max Latency: <span id="max-latency">-</span> ms</p>
-            <p>Error Rate: <span id="error-rate">-</span>%</p>
-          </div>
-        </div>
-      </div>
-
-      <button onclick="refreshPerformanceData()" style="margin-bottom: 20px;">
-        🔄 Refresh Data
-      </button>
-    </div>
-
-    <!-- Logs Panel -->
-    <div class="panel" id="logs-panel">
-      <div class="chart-container">
-        <h3 class="chart-title">🚨 Recent Errors</h3>
-        <div id="error-logs">
-          <p style="opacity: 0.7; text-align: center;">No errors to display</p>
-        </div>
-      </div>
-      
-      <div class="chart-container">
-        <h3 class="chart-title">💾 System Metrics</h3>
-        <div id="system-metrics">
-          <p style="opacity: 0.7; text-align: center;">Loading system metrics...</p>
-        </div>
-      </div>
-    </div>
+    <!-- ==================== FOOTER ==================== -->
+    <footer>© 2025 ระบบทำนายโรคใบทุเรียน — พัฒนาด้วย AI และ Grad-CAM</footer>
   </div>
 
   <script>
-    // Global variables
+    // ==================== GLOBAL VARIABLES & SETUP ====================
+    
+    // DOM Element Shortcuts
+    const $ = id => document.getElementById(id);
+
+    // Main Elements
+    const fileInput = $('file-input');
+    const uploader = $('uploader');
+    const fileNameEl = $('file-name');
+    const fileSizeEl = $('file-size');
+    const predictBtn = $('predict-btn');
+    const origCanvas = $('orig-canvas');
+    const heatmapCanvas = $('heatmap-canvas');
+    const dlHeatmap = $('dl-heatmap');
+    const dlOriginal = $('dl-original');
+    const canvasPlaceholder = $('canvas-placeholder');
+    const predResults = $('prediction-results');
+    const gcWarning = $('gradcam-warning');
+    const serverStatus = $('server-status');
+
+    // Camera Elements
+    const cameraArea = $('camera-area');
+    const btnFile = $('btn-file');
+    const btnCamera = $('btn-camera');
+    const startCameraBtn = $('start-camera');
+    const captureBtn = $('capture');
+    const stopCameraBtn = $('stop-camera');
+    const videoEl = $('camera-video');
+    const cameraCanvas = $('camera-canvas');
+
+    // Application State
     let currentFile = null;
-    let currentImageData = null;
-    let performanceData = null;
-    let camera = {
-      stream: null,
-      video: null,
-      canvas: null,
-      context: null,
-      isActive: false,
-      isMirrored: false
-    };
-    let settings = {
-      gradcamEnabled: true,
-      mirrorEnabled: false
-    };
+    let origImg = null;
+    let heatmapImg = null;
+    let cameraStream = null;
 
-    // Initialize camera elements
-    function initializeCamera() {
-      camera.video = document.getElementById('camera-video');
-      camera.canvas = document.getElementById('camera-canvas');
-      camera.context = camera.canvas.getContext('2d');
+    // Canvas Contexts
+    const origCtx = origCanvas.getContext('2d');
+    const heatCtx = heatmapCanvas.getContext('2d');
+
+    // ==================== UTILITY FUNCTIONS ====================
+    
+    function setStatusServer(msg, isError = false) {
+      serverStatus.textContent = msg;
+      serverStatus.className = `status ${isError ? 'err' : 'ok'} fade-in`;
     }
 
-    // Tab switching
-    function switchTab(tabName) {
-      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-      document.querySelectorAll('.panel').forEach(panel => panel.classList.remove('active'));
-      
-      const tabIndex = tabName === 'predict' ? 1 : tabName === 'performance' ? 2 : 3;
-      document.querySelector(`.tab:nth-child(${tabIndex})`).classList.add('active');
-      document.getElementById(`${tabName}-panel`).classList.add('active');
-      
-      if (tabName === 'performance') {
-        refreshPerformanceData();
-      }
+    function kb(n) { 
+      return (n/1024).toFixed(2) + ' KB'; 
     }
 
-    // Input method switching
-    function switchInputMethod(method) {
-      document.querySelectorAll('.method-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.input-section').forEach(section => section.style.display = 'none');
-      
-      if (method === 'file') {
-        document.querySelector('.method-btn:first-child').classList.add('active');
-        document.getElementById('file-section').style.display = 'block';
-        stopCamera(); // Stop camera if switching to file
-      } else if (method === 'camera') {
-        document.querySelector('.method-btn:last-child').classList.add('active');
-        document.getElementById('camera-section').style.display = 'block';
-      }
+    function escapeHtml(s) {
+      if (s == null) return '';
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
     }
 
-    // Settings toggle functions
-    function toggleGradCAM() {
-      settings.gradcamEnabled = !settings.gradcamEnabled;
-      const toggle = document.getElementById('gradcam-toggle');
-      const status = document.getElementById('gradcam-status');
+    // ==================== UI CONTROL FUNCTIONS ====================
+    
+    function resetUI() {
+      // Reset state
+      currentFile = null;
+      origImg = null;
+      heatmapImg = null;
       
-      toggle.classList.toggle('active', settings.gradcamEnabled);
-      status.textContent = settings.gradcamEnabled ? 'เปิด' : 'ปิด';
-      // Hide gradcam tab if disabled
-      if (!settings.gradcamEnabled) {
-        document.getElementById('gradcam-tab').style.display = 'none';
+      // Reset UI elements
+      predResults.innerHTML = '<div class="muted" style="padding:16px;text-align:center">กดปุ่ม "ทำนาย" เพื่อเริ่ม</div>';
+      fileNameEl.textContent = 'ยังไม่ได้เลือกไฟล์';
+      fileSizeEl.textContent = '';
+      canvasPlaceholder.style.display = 'block';
+      
+      // Clear canvases
+      origCtx.clearRect(0,0,origCanvas.width,origCanvas.height);
+      heatCtx.clearRect(0,0,heatmapCanvas.width,heatmapCanvas.height);
+      
+      // Reset buttons and warnings
+      dlHeatmap.style.display = 'none';
+      predictBtn.disabled = true;
+      gcWarning.style.display = 'none';
+      heatmapCanvas.style.display = 'none';
+      
+      console.log('UI reset');
+    }
+
+    function switchInput(mode) {
+      if (mode === 'file') {
+        btnFile.classList.add('active'); 
+        btnCamera.classList.remove('active');
+        cameraArea.style.display = 'none';
+        stopCamera();
       } else {
-        if (document.getElementById('gradcam-image').src) {
-          document.getElementById('gradcam-tab').style.display = 'inline-block';
-        }
+        btnCamera.classList.add('active'); 
+        btnFile.classList.remove('active');
+        cameraArea.style.display = 'block';
       }
     }
 
-    function toggleMirror() {
-      settings.mirrorEnabled = !settings.mirrorEnabled;
-      const toggle = document.getElementById('mirror-toggle');
-      const status = document.getElementById('mirror-status');
+    // ==================== FILE HANDLING FUNCTIONS ====================
+    
+    function handleFile(file) {
+      if (!file) return;
       
-      toggle.classList.toggle('active', settings.mirrorEnabled);
-      status.textContent = settings.mirrorEnabled ? 'เปิด' : 'ปิด';
+      currentFile = file;
+      fileNameEl.textContent = file.name;
+      fileSizeEl.textContent = (file.size > 1024*1024) ? 
+        (file.size/(1024*1024)).toFixed(2)+' MB' : 
+        kb(file.size);
       
-      // Apply mirror effect to video
-      if (camera.video) {
-        camera.video.style.transform = settings.mirrorEnabled ? 'scaleX(-1)' : 'none';
-      }
+      const reader = new FileReader();
+      reader.onload = ev => loadOriginal(ev.target.result);
+      reader.readAsDataURL(file);
+      predictBtn.disabled = false;
     }
 
-    // Camera functions
+    function loadOriginal(dataUrl) {
+      const img = new Image();
+      img.onload = () => {
+        // Set canvas dimensions
+        origCanvas.width = img.naturalWidth;
+        origCanvas.height = img.naturalHeight;
+        heatmapCanvas.width = img.naturalWidth;
+        heatmapCanvas.height = img.naturalHeight;
+        
+        // Draw image
+        origCtx.clearRect(0,0,origCanvas.width,origCanvas.height);
+        origCtx.drawImage(img,0,0,origCanvas.width,origCanvas.height);
+        
+        // Update state and UI
+        origImg = img;
+        canvasPlaceholder.style.display = 'none';
+        
+        console.log('Original image loaded:', img.naturalWidth, 'x', img.naturalHeight);
+      };
+      img.onerror = () => console.error('Failed to load original image');
+      img.crossOrigin = 'anonymous';
+      img.src = dataUrl;
+    }
+
+    // ==================== CAMERA FUNCTIONS ====================
+    
     async function startCamera() {
       try {
-        const constraints = {
-          video: {
-            width: { ideal: 640 },
-            height: { ideal: 480 },
-            facingMode: 'environment' // Try to use back camera on mobile
-          }
-        };
-
-        camera.stream = await navigator.mediaDevices.getUserMedia(constraints);
-        camera.video.srcObject = camera.stream;
-        camera.isActive = true;
-
-        // Show video, hide placeholder
-        document.getElementById('camera-placeholder').style.display = 'none';
-        camera.video.style.display = 'block';
-        camera.canvas.style.display = 'none';
-
-        // Update controls
-        document.getElementById('start-camera-btn').style.display = 'none';
-        document.getElementById('stop-camera-btn').style.display = 'inline-block';
-        document.getElementById('capture-btn').disabled = false;
-        document.getElementById('retake-btn').style.display = 'none';
-
-        // Apply mirror if enabled
-        if (settings.mirrorEnabled) {
-          camera.video.style.transform = 'scaleX(-1)';
-        }
-
-        // Reset analysis section
-        document.getElementById('analysis-section').style.display = 'none';
-
-      } catch (error) {
-        console.error('Error accessing camera:', error);
-        alert('ไม่สามารถเข้าถึงกล้องได้: ' + error.message);
+        cameraStream = await navigator.mediaDevices.getUserMedia({
+          video: { facingMode: 'environment', width: { ideal: 640 } }, 
+          audio: false
+        });
+        
+        videoEl.srcObject = cameraStream;
+        videoEl.style.display = 'block';
+        captureBtn.disabled = false;
+        stopCameraBtn.style.display = 'inline-block';
+        startCameraBtn.style.display = 'none';
+      } catch (err) {
+        alert('ไม่สามารถเปิดกล้อง: ' + err.message);
       }
     }
 
     function stopCamera() {
-      if (camera.stream) {
-        camera.stream.getTracks().forEach(track => track.stop());
-        camera.stream = null;
+      if (cameraStream) {
+        cameraStream.getTracks().forEach(t => t.stop());
       }
-      
-      camera.isActive = false;
-      
-      // Hide video, show placeholder
-      if (camera.video) camera.video.style.display = 'none';
-      document.getElementById('camera-placeholder').style.display = 'block';
-      if (camera.canvas) camera.canvas.style.display = 'none';
-
-      // Update controls
-      document.getElementById('start-camera-btn').style.display = 'inline-block';
-      document.getElementById('stop-camera-btn').style.display = 'none';
-      document.getElementById('capture-btn').disabled = true;
-      document.getElementById('retake-btn').style.display = 'none';
-
-      // Reset analysis section
-      document.getElementById('analysis-section').style.display = 'none';
+      videoEl.style.display = 'none';
+      captureBtn.disabled = true;
+      stopCameraBtn.style.display = 'none';
+      startCameraBtn.style.display = 'inline-block';
     }
 
     function captureImage() {
-      if (!camera.isActive) return;
-
-      const video = camera.video;
-      camera.canvas.width = video.videoWidth;
-      camera.canvas.height = video.videoHeight;
-
-      // Draw video frame to canvas
-      // If mirror is on, flip before drawing
-      if (settings.mirrorEnabled) {
-        camera.context.save();
-        camera.context.scale(-1, 1);
-        camera.context.drawImage(video, -video.videoWidth, 0, video.videoWidth, video.videoHeight);
-        camera.context.restore();
-      } else {
-        camera.context.drawImage(video, 0, 0);
-      }
-
-      // Convert to blob and create file
-      camera.canvas.toBlob(blob => {
-        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-        currentFile = new File([blob], `camera-capture-${timestamp}.jpg`, { type: 'image/jpeg' });
-        
-        // Show analysis section
-        setupImageForAnalysis(camera.canvas.toDataURL(), currentFile.name, blob.size);
-        
-        // Hide video, show canvas
-        camera.video.style.display = 'none';
-        camera.canvas.style.display = 'block';
-        
-        // Update controls
-        document.getElementById('capture-btn').disabled = true;
-        document.getElementById('retake-btn').style.display = 'inline-block';
-        
-      }, 'image/jpeg', 0.8);
+      cameraCanvas.width = videoEl.videoWidth;
+      cameraCanvas.height = videoEl.videoHeight;
+      
+      const ctx = cameraCanvas.getContext('2d');
+      ctx.drawImage(videoEl, 0, 0, cameraCanvas.width, cameraCanvas.height);
+      
+      cameraCanvas.toBlob(blob => {
+        const f = new File([blob], `camera-${Date.now()}.jpg`, {type:'image/jpeg'});
+        handleFile(f);
+        loadOriginal(URL.createObjectURL(f));
+      }, 'image/jpeg', 0.85);
     }
 
-    function retakeImage() {
-      // Show video, hide canvas
-      camera.video.style.display = 'block';
-      camera.canvas.style.display = 'none';
-      
-      // Update controls
-      document.getElementById('capture-btn').disabled = false;
-      document.getElementById('retake-btn').style.display = 'none';
-      
-      // Reset analysis
-      currentFile = null;
-      document.getElementById('analysis-section').style.display = 'none';
-    }
-
-    // Image view switching
-    function switchImageView(view) {
-      document.querySelectorAll('.image-tab').forEach(tab => tab.classList.remove('active'));
-      
-      const originalImg = document.getElementById('original-image');
-      const gradcamImg = document.getElementById('gradcam-image');
-      
-      if (view === 'original') {
-        document.querySelector('.image-tab:first-child').classList.add('active');
-        originalImg.style.display = 'block';
-        gradcamImg.style.display = 'none';
-      } else if (view === 'gradcam') {
-        document.querySelector('.image-tab:last-child').classList.add('active');
-        originalImg.style.display = 'none';
-        gradcamImg.style.display = 'block';
-      }
-    }
-
-    // File handling functions
-    function setFile(file) {
-      if (!file) return;
-      currentFile = file;
-      
-      const reader = new FileReader();
-      reader.onload = e => {
-        setupImageForAnalysis(e.target.result, file.name, file.size);
-      };
-      reader.readAsDataURL(file);
-    }
-
-    function setupImageForAnalysis(imageSrc, fileName, fileSize) {
-      // Update image displays
-      document.getElementById('original-image').src = imageSrc;
-      document.getElementById('gradcam-image').style.display = 'none';
-      document.getElementById('gradcam-tab').style.display = 'none';
-      
-      // Update file info
-      document.getElementById('file-name').textContent = fileName;
-      document.getElementById('file-size').textContent = formatFileSize(fileSize);
-      document.getElementById('file-status').textContent = 'พร้อมทำนาย';
-      document.getElementById('file-status').className = 'status success';
-      
-      // Show analysis section and enable predict button
-      document.getElementById('analysis-section').style.display = 'grid';
-      document.getElementById('predict-btn').disabled = false;
-      
-      // Reset results
-      document.getElementById('prediction-results').innerHTML = '<p style="opacity: 0.7; text-align: center;">กดปุ่ม "ทำนาย" เพื่อเริ่มวิเคราะห์</p>';
-      document.getElementById('timing-info').style.display = 'none';
-    }
-
-    function formatFileSize(bytes) {
-      if (bytes === 0) return '0 Bytes';
-      const k = 1024;
-      const sizes = ['Bytes', 'KB', 'MB'];
-      const i = Math.floor(Math.log(bytes) / Math.log(k));
-      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-    }
-
-    // Drag & drop functionality
-    function setupDragDrop() {
-      const dropzone = document.getElementById('dropzone');
-      const fileInput = document.getElementById('file-input');
-
-      dropzone.addEventListener('click', () => fileInput.click());
-      fileInput.addEventListener('change', (e) => setFile(e.target.files[0]));
-
-      ['dragenter', 'dragover'].forEach(evt => {
-        dropzone.addEventListener(evt, (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          dropzone.classList.add('dragover');
-        });
-      });
-
-      ['dragleave', 'drop'].forEach(evt => {
-        dropzone.addEventListener(evt, (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          dropzone.classList.remove('dragover');
-        });
-      });
-
-      dropzone.addEventListener('drop', (e) => {
-        const files = e.dataTransfer.files;
-        if (files.length > 0) setFile(files[0]);
-      });
-    }
-
-    // Prediction function
+    // ==================== PREDICTION FUNCTIONS ====================
+    
     async function predict() {
-      if (!currentFile) return;
+      if (!currentFile) return alert('กรุณาเลือกหรือถ่ายรูปก่อน');
       
-      const predictBtn = document.getElementById('predict-btn');
-      const predictionResults = document.getElementById('prediction-results');
-      const timingInfo = document.getElementById('timing-info');
-      
+      // Update UI state
       predictBtn.disabled = true;
-      predictBtn.innerHTML = '<span class="loading"></span> กำลังทำนาย...';
-      predictionResults.innerHTML = '<p style="opacity: 0.7; text-align: center;"><span class="loading"></span> กำลังวิเคราะห์รูปภาพ...</p>';
+      predictBtn.textContent = '⏳ กำลังทำนาย...';
 
+      // Prepare form data
+      const form = new FormData();
+      form.append('file', currentFile);
+      form.append('enable_gradcam', 'true');
+
+      let resJson = null;
       try {
-        const formData = new FormData();
-        formData.append('file', currentFile);
-        formData.append('enable_gradcam', settings.gradcamEnabled ? 'true' : 'false');
-
-        const response = await fetch('/predict', {
-          method: 'POST',
-          body: formData
-        });
-
-        const data = await response.json();
-
-        if (!response.ok) {
-          throw new Error(data.error || 'เกิดข้อผิดพลาดจากเซิร์ฟเวอร์');
-        }
-
-        // Display results
-        renderPredictionResults(data);
-        renderTimingInfo(data);
-        
-        // Show Grad-CAM if available
-        if (data.gradcam_image && settings.gradcamEnabled) {
-          document.getElementById('gradcam-image').src = data.gradcam_image;
-          document.getElementById('gradcam-tab').style.display = 'inline-block';
-        } else {
-          document.getElementById('gradcam-tab').style.display = 'none';
-        }
-
-      } catch (error) {
-        predictionResults.innerHTML = `
-          <div class="error-log">
-            <div class="error-time">${new Date().toLocaleString('th-TH')}</div>
-            <div class="error-msg">❌ ${escapeHtml(error.message)}</div>
-          </div>
-        `;
-        timingInfo.style.display = 'none';
-      } finally {
+        const resp = await fetch('/predict', { method: 'POST', body: form });
+        resJson = await resp.json();
+        if (!resp.ok) throw new Error(resJson.error || 'Server error');
+      } catch (err) {
+        alert('เกิดข้อผิดพลาด: ' + err.message);
+        setStatusServer('ข้อผิดพลาดเซิร์ฟเวอร์', true);
         predictBtn.disabled = false;
-        predictBtn.innerHTML = '🚀 ทำนาย';
-      }
-    }
-
-    function renderPredictionResults(data) {
-      const predictionResults = document.getElementById('prediction-results');
-      
-      if (!data.topk || !Array.isArray(data.topk)) {
-        predictionResults.innerHTML = '<p>ไม่มีผลลัพธ์</p>';
+        predictBtn.textContent = '🚀 ทำนาย';
         return;
       }
 
-      const rows = data.topk.map(item => {
-        const percentage = (item.prob * 100).toFixed(2);
-        return `
-          <div class="prediction-row">
-            <div class="prediction-label">${escapeHtml(item.label)}</div>
-            <div class="prob-bar"><i style="width: ${percentage}%"></i></div>
-            <div class="prob-percent">${percentage}%</div>
-          </div>
-        `;
-      }).join('');
+      console.log('Prediction response:', resJson);
 
-      predictionResults.innerHTML = rows;
+      // Update UI with results
+      renderPredictions(resJson.topk || []);
+      updatePerformanceMetrics(resJson);
+      handleGradCAMResult(resJson);
 
-      // Animate progress bars
-      setTimeout(() => {
-        document.querySelectorAll('.prob-bar > i').forEach(bar => {
-          const width = bar.style.width;
-          bar.style.width = '0%';
-          setTimeout(() => bar.style.width = width, 100);
-        });
-      }, 50);
+      // Reset button state
+      setStatusServer('พร้อม', false);
+      predictBtn.disabled = false;
+      predictBtn.textContent = '🚀 ทำนาย';
     }
 
-    function renderTimingInfo(data) {
-      const timingInfo = document.getElementById('timing-info');
-      const totalTimeEl = document.getElementById('total-time');
-      const preprocessEl = document.getElementById('preprocess-time');
-      const inferenceEl = document.getElementById('inference-time');
-      const gradcamRow = document.getElementById('gradcam-timing');
-      const gradcamEl = document.getElementById('gradcam-time');
-
-      // Response uses keys: latency_ms, inference_time_ms, preprocessing_time_ms, gradcam_time_ms
-      const total = data.latency_ms ?? '-';
-      const preprocess = data.preprocessing_time_ms ?? '-';
-      const inference = data.inference_time_ms ?? '-';
-      const gradcam = data.gradcam_time_ms ?? 0;
-
-      totalTimeEl.textContent = typeof total === 'number' ? `${total} ms` : total;
-      preprocessEl.textContent = typeof preprocess === 'number' ? `${preprocess} ms` : preprocess;
-      inferenceEl.textContent = typeof inference === 'number' ? `${inference} ms` : inference;
-
-      if (settings.gradcamEnabled && gradcam > 0) {
-        gradcamRow.style.display = 'flex';
-        gradcamEl.textContent = `${gradcam} ms`;
-      } else {
-        gradcamRow.style.display = 'none';
+    function renderPredictions(topk) {
+      if (!topk || topk.length === 0) {
+        predResults.innerHTML = '<div class="muted" style="padding:16px;text-align:center">ไม่พบผลลัพธ์</div>';
+        return;
       }
-
-      timingInfo.style.display = 'block';
+      
+      predResults.innerHTML = '';
+      topk.forEach(item => {
+        const pct = (item.prob * 100).toFixed(2);
+        const row = document.createElement('div');
+        row.className = 'pred-row fade-in';
+        row.innerHTML = `
+          <div class="pred-label">${escapeHtml(item.label)}</div>
+          <div class="bar"><i style="width:${pct}%"></i></div>
+          <div class="pred-percent">${pct}%</div>
+        `;
+        predResults.appendChild(row);
+      });
     }
 
-    // Performance data fetch & render
-    async function refreshPerformanceData() {
-      try {
-        const resp = await fetch('/performance');
-        const data = await resp.json();
+    function updatePerformanceMetrics(resJson) {
+      $('total-time').textContent = (resJson.latency_ms ?? '-') + ' ms';
+      $('pre-time').textContent = (resJson.preprocessing_time_ms ?? '-') + ' ms';
+      $('inf-time').textContent = (resJson.inference_time_ms ?? '-') + ' ms';
+      $('gc-time').textContent = (resJson.gradcam_time_ms ?? '-') + ' ms';
+    }
 
-        if (!resp.ok) {
-          console.warn('Failed to fetch performance:', data);
+    function handleGradCAMResult(resJson) {
+      if (resJson.gradcam_image) {
+        console.log('Grad-CAM image received, length:', resJson.gradcam_image.length);
+        displayHeatmap(resJson.gradcam_image);
+        dlHeatmap.style.display = 'none';
+      }
+    }
+
+    function displayHeatmap(dataUrl) {
+      console.log('Attempting to display heatmap');
+      const img = new Image();
+      img.onload = () => {
+        console.log('Heatmap image loaded:', img.naturalWidth, 'x', img.naturalHeight);
+        heatmapCanvas.width = origCanvas.width;
+        heatmapCanvas.height = origCanvas.height;
+        heatCtx.clearRect(0, 0, heatmapCanvas.width, heatmapCanvas.height);
+        heatCtx.drawImage(img, 0, 0, heatmapCanvas.width, heatmapCanvas.height);
+        heatmapImg = img;
+        heatmapCanvas.style.display = 'block';
+        dlHeatmap.style.display = 'inline-block';
+        console.log('Heatmap rendered, canvas size:', heatmapCanvas.width, 'x', heatmapCanvas.height);
+      };
+      img.onerror = () => {
+        console.error('Failed to load heatmap image:', dataUrl.slice(0, 50) + '...');
+        gcWarning.textContent = 'ไม่สามารถโหลดภาพ Grad-CAM';
+        gcWarning.style.display = 'block';
+        heatmapCanvas.style.display = 'none';
+      };
+      img.crossOrigin = 'anonymous';
+      img.src = dataUrl;
+    }
+
+    // ==================== DOWNLOAD FUNCTIONS ====================
+    
+    function downloadOriginal() {
+      if (!origImg) return;
+      const a = document.createElement('a');
+      a.href = origCanvas.toDataURL('image/png');
+      a.download = 'original.png';
+      a.click();
+    }
+
+    function downloadHeatmap() {
+      if (!heatmapImg) {
+        console.error('No heatmap image available for download');
+        return;
+      }
+      const a = document.createElement('a');
+      a.href = heatmapCanvas.toDataURL('image/png');
+      a.download = 'heatmap.png';
+      a.click();
+      console.log('Heatmap downloaded');
+    }
+
+    // ==================== SERVER COMMUNICATION FUNCTIONS ====================
+    
+    async function refreshSystem() {
+      try {
+        const r = await fetch('/performance');
+        if (!r.ok) {
+          setStatusServer('เซิร์ฟเวอร์ไม่ตอบสนอง', true);
           return;
         }
-
-        performanceData = data;
-        updatePerformanceUI(data);
-        renderErrorLogs(data.recent_errors || []);
-        renderSystemMetrics(data.system_metrics || []);
-        renderClassDistribution(data.class_distribution || {});
-      } catch (err) {
-        console.error('Error fetching performance:', err);
+        
+        const j = await r.json();
+        const sys = j.system_metrics && j.system_metrics.length ? j.system_metrics.slice(-1)[0] : null;
+        
+        if (sys) {
+          $('system-metrics').innerHTML = `
+            <div class="small fade-in">
+              CPU ${sys.cpu_percent}% — Mem ${sys.memory_percent}% (${(sys.memory_used_gb||0).toFixed(2)} GB)
+            </div>
+          `;
+          setStatusServer('พร้อม', false);
+        } else {
+          $('system-metrics').innerHTML = '<div class="muted">ไม่มีข้อมูลระบบล่าสุด</div>';
+          setStatusServer('ไม่มีข้อมูลระบบ', true);
+        }
+      } catch (e) {
+        setStatusServer('ข้อผิดพลาดเซิร์ฟเวอร์', true);
       }
     }
 
-    function updatePerformanceUI(data) {
-      if (!data || data.status !== 'ok') {
-        document.getElementById('total-predictions').textContent = data.total_predictions ?? '-';
-        document.getElementById('avg-latency').textContent = data.avg_latency_ms ?? '-';
-        document.getElementById('success-rate').textContent = data.successful_predictions && data.total_predictions ? ((data.successful_predictions / data.total_predictions) * 100).toFixed(1) : (data.error_rate ? (100 - data.error_rate).toFixed(1) : '-');
-        document.getElementById('avg-confidence').textContent = data.avg_confidence ? `${(data.avg_confidence * 100).toFixed(1)}%` : '-';
-        document.getElementById('avg-gradcam-time').textContent = data.avg_gradcam_time_ms ?? '-';
-        document.getElementById('min-latency').textContent = data.min_latency_ms ?? '-';
-        document.getElementById('max-latency').textContent = data.max_latency_ms ?? '-';
-        document.getElementById('error-rate').textContent = (data.error_rate !== undefined) ? data.error_rate.toFixed(2) : '-';
-        return;
+    async function checkServerStatus() {
+      try {
+        const r = await fetch('/debug');
+        if (!r.ok) throw new Error('Server not responding');
+        
+        const j = await r.json();
+        console.log('Debug response:', j);
+        
+        if (!j.model_loaded || !j.gradcam_initialized || !j.gradcam_available) {
+          setStatusServer('โมเดลหรือ Grad-CAM ไม่โหลด', true);
+          predictBtn.disabled = true;
+          alert('เซิร์ฟเวอร์ไม่พร้อม: โมเดลหรือ Grad-CAM ไม่โหลด กรุณาตรวจสอบ log เซิร์ฟเวอร์');
+        } else {
+          setStatusServer('พร้อม', false);
+        }
+      } catch (e) {
+        setStatusServer('เซิร์ฟเวอร์ไม่ตอบสนอง', true);
+        predictBtn.disabled = true;
+        alert('เซิร์ฟเวอร์ไม่ตอบสนอง กรุณาตรวจสอบ log เซิร์ฟเวอร์');
       }
-
-      document.getElementById('total-predictions').textContent = data.total_predictions ?? '-';
-      document.getElementById('avg-latency').textContent = (data.avg_latency_ms !== undefined) ? `${Math.round(data.avg_latency_ms)} ms` : '-';
-      document.getElementById('success-rate').textContent = (data.successful_predictions !== undefined && data.total_predictions) ? `${((data.successful_predictions / data.total_predictions) * 100).toFixed(1)}%` : '-';
-      document.getElementById('avg-confidence').textContent = (data.avg_confidence !== undefined) ? `${(data.avg_confidence * 100).toFixed(1)}%` : '-';
-      document.getElementById('avg-gradcam-time').textContent = (data.avg_gradcam_time_ms !== undefined) ? `${Math.round(data.avg_gradcam_time_ms)} ms` : '-';
-      document.getElementById('min-latency').textContent = data.min_latency_ms ?? '-';
-      document.getElementById('max-latency').textContent = data.max_latency_ms ?? '-';
-      document.getElementById('error-rate').textContent = (data.error_rate !== undefined) ? `${data.error_rate.toFixed(2)}` : '-';
     }
 
-    function renderClassDistribution(dist) {
-      const container = document.getElementById('class-distribution');
-      const keys = Object.keys(dist || {});
-      if (!keys.length) {
-        container.innerHTML = '<p style="opacity: 0.7; text-align: center;">No data</p>';
-        return;
-      }
+    // ==================== EVENT LISTENERS SETUP ====================
+    
+    function setupEventListeners() {
+      // File upload events
+      uploader.addEventListener('click', () => fileInput.click());
+      
+      uploader.addEventListener('dragover', e => { 
+        e.preventDefault(); 
+        uploader.classList.add('drag'); 
+      });
+      
+      uploader.addEventListener('dragleave', e => { 
+        uploader.classList.remove('drag'); 
+      });
+      
+      uploader.addEventListener('drop', e => {
+        e.preventDefault();
+        uploader.classList.remove('drag');
+        const f = e.dataTransfer.files[0];
+        if (f) handleFile(f);
+      });
+      
+      fileInput.addEventListener('change', e => { 
+        if (e.target.files[0]) handleFile(e.target.files[0]); 
+      });
 
-      const total = keys.reduce((s, k) => s + (dist[k] || 0), 0) || 1;
-      container.innerHTML = keys.map(k => {
-        const v = dist[k] || 0;
-        const pct = ((v / total) * 100).toFixed(1);
-        return `<div class="class-item"><div>${escapeHtml(k)}</div><div style="min-width: 120px; display:flex; gap:8px; align-items:center;"><div style="flex:1; height:12px; background:#253046; border-radius:6px; overflow:hidden;"><i style="display:block; height:100%; width:${pct}%; background:linear-gradient(90deg,#22c55e,#16a34a);"></i></div><div style="width:48px; text-align:right; color:#22c55e;">${pct}%</div></div></div>`;
-      }).join('');
+      // Camera events
+      startCameraBtn.addEventListener('click', startCamera);
+      captureBtn.addEventListener('click', captureImage);
+      stopCameraBtn.addEventListener('click', stopCamera);
     }
 
-    function renderErrorLogs(errors) {
-      const container = document.getElementById('error-logs');
-      if (!errors || errors.length === 0) {
-        container.innerHTML = '<p style="opacity: 0.7; text-align: center;">No errors to display</p>';
-        return;
-      }
-      container.innerHTML = errors.slice().reverse().map(e => {
-        const time = e.timestamp || new Date().toISOString();
-        const msg = e.error || e.message || JSON.stringify(e);
-        return `<div class="error-log"><div class="error-time">${escapeHtml(new Date(time).toLocaleString('th-TH'))}</div><div class="error-msg">❌ ${escapeHtml(msg)}</div></div>`;
-      }).join('');
+    // ==================== APPLICATION INITIALIZATION ====================
+    
+    function initializeApp() {
+      console.log('Initializing app...');
+      
+      // Setup event listeners
+      setupEventListeners();
+      
+      // Initialize UI state
+      resetUI();
+      
+      // Check server status
+      checkServerStatus();
+      
+      // Start system monitoring
+      refreshSystem();
+      setInterval(refreshSystem, 8000);
+      
+      console.log('App initialized successfully');
     }
 
-    function renderSystemMetrics(metrics) {
-      const container = document.getElementById('system-metrics');
-      if (!metrics || metrics.length === 0) {
-        container.innerHTML = '<p style="opacity: 0.7; text-align: center;">No system metrics</p>';
-        return;
-      }
-      // show last 10 metrics
-      container.innerHTML = metrics.slice().reverse().map(m => {
-        const time = m.timestamp ? new Date(m.timestamp).toLocaleString('th-TH') : '-';
-        const cpu = m.cpu_percent !== undefined ? `${m.cpu_percent}%` : '-';
-        const mem = m.memory_percent !== undefined ? `${m.memory_percent}%` : '-';
-        const used = m.memory_used_gb !== undefined ? `${m.memory_used_gb.toFixed(2)} GB` : '-';
-        return `<div style="padding:8px 0; border-bottom:1px dashed #334155;"><div style="font-size:12px;color:#94a3b8;">${escapeHtml(time)}</div><div style="margin-top:6px;">CPU: <strong>${escapeHtml(cpu)}</strong> &nbsp; | &nbsp; Mem: <strong>${escapeHtml(mem)}</strong> (${escapeHtml(used)})</div></div>`;
-      }).join('');
-    }
-
-    // Utility: escape HTML
-    function escapeHtml(unsafe) {
-      if (unsafe === null || unsafe === undefined) return '';
-      return String(unsafe)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-    }
-
-    // Initialize UI on load
-    document.addEventListener('DOMContentLoaded', () => {
-      setupDragDrop();
-      initializeCamera();
-
-      // If user clicks outside, ensure camera stops when switching to file
-      document.querySelectorAll('.method-btn').forEach(btn => btn.addEventListener('click', () => {
-        // small delay to allow switch
-        setTimeout(() => {
-          if (document.querySelector('.method-btn:first-child').classList.contains('active')) {
-            stopCamera();
-          }
-        }, 50);
-      }));
-
-      // Auto refresh performance every 10 seconds when that tab is active
-      setInterval(() => {
-        const perfTabActive = document.getElementById('performance-panel').classList.contains('active');
-        if (perfTabActive) refreshPerformanceData();
-      }, 10000);
-    });
+    // Start the application when DOM is loaded
+    document.addEventListener('DOMContentLoaded', initializeApp);
   </script>
 </body>
-</html>

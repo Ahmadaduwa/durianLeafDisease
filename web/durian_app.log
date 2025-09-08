@@ -38,3 +38,1057 @@
 2025-09-08 18:45:24,589 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:45:24] "POST /predict HTTP/1.1" 200 -
 2025-09-08 18:46:08,672 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
 2025-09-08 18:46:09,581 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 18:46:19,039 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 18:46:19,045 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 18:46:52,559 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 18:46:53,528 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 18:47:02,676 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 18:47:02,681 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 18:47:12,046 - __main__ - WARNING - GradCAM: failed to register tensor hook on activation: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 18:47:12,273 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:47:12] "POST /predict HTTP/1.1" 200 -
+2025-09-08 18:47:23,937 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:47:23] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:48:32,842 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.162:5000
+2025-09-08 18:48:32,843 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 18:48:32,845 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 18:48:39,503 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 18:48:39,506 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 18:48:49,956 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:48:49] "GET / HTTP/1.1" 200 -
+2025-09-08 18:48:50,840 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:48:50] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 18:48:51,227 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:48:51] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 18:48:51,386 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:48:51] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 18:49:01,650 - __main__ - WARNING - GradCAM: failed to register tensor hook on activation: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 18:49:01,715 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:49:01] "POST /predict HTTP/1.1" 200 -
+2025-09-08 18:49:05,429 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:49:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 18:49:37,996 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:49:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:49:38,397 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:49:38] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:49:41,407 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:49:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:49:44,911 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:49:44] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:49:45,415 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:49:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:49:51,401 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:49:51] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:50:01,402 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:50:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:50:12,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:50:12] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:50:22,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:50:22] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:50:32,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:50:32] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:50:42,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:50:42] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:50:52,068 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:50:52] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:51:02,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:51:02] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:52:03,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:52:03] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:52:16,458 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 18:52:17,291 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 18:52:25,374 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 18:52:25,378 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 18:52:30,299 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:52:30] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:52:33,659 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 18:52:33,787 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:52:33] "POST /predict HTTP/1.1" 200 -
+2025-09-08 18:52:37,336 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:52:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:52:38,256 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:52:38] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:53:02,058 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 18:53:02,136 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:53:02] "POST /predict HTTP/1.1" 200 -
+2025-09-08 18:53:05,375 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:53:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:53:11,399 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:53:11] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:53:18,712 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:53:18] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:53:32,653 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 18:53:32,726 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:53:32] "POST /predict HTTP/1.1" 200 -
+2025-09-08 18:53:38,651 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 18:53:38,724 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:53:38] "POST /predict HTTP/1.1" 200 -
+2025-09-08 18:53:54,521 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 18:53:54,595 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:53:54] "POST /predict HTTP/1.1" 200 -
+2025-09-08 18:55:36,457 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:55:36] "GET / HTTP/1.1" 200 -
+2025-09-08 18:56:27,867 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:56:27] "GET / HTTP/1.1" 200 -
+2025-09-08 18:56:32,393 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 18:56:32,465 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:56:32] "POST /predict HTTP/1.1" 200 -
+2025-09-08 18:56:48,367 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:56:48] "GET /performance HTTP/1.1" 200 -
+2025-09-08 18:56:55,316 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:56:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 18:57:15,177 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:57:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 18:57:29,708 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:57:29] "GET / HTTP/1.1" 200 -
+2025-09-08 18:57:34,043 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:57:34] "GET / HTTP/1.1" 200 -
+2025-09-08 18:57:38,929 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:57:38] "GET / HTTP/1.1" 200 -
+2025-09-08 18:57:44,411 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:57:44] "GET / HTTP/1.1" 200 -
+2025-09-08 18:57:57,913 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 18:57:57,979 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:57:57] "POST /predict HTTP/1.1" 200 -
+2025-09-08 18:58:05,782 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 18:58:05,853 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:58:05] "POST /predict HTTP/1.1" 200 -
+2025-09-08 18:58:07,703 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 18:58:07,773 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:58:07] "POST /predict HTTP/1.1" 200 -
+2025-09-08 18:58:11,471 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 18:58:11,538 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:58:11] "POST /predict HTTP/1.1" 200 -
+2025-09-08 18:58:12,628 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 18:58:12,695 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:58:12] "POST /predict HTTP/1.1" 200 -
+2025-09-08 18:58:15,745 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 18:58:15] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:01:42,015 - __main__ - INFO - GradCAM: registered forward hook on layer: layer4
+2025-09-08 19:01:42,034 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.162:5000
+2025-09-08 19:01:42,034 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 19:01:42,036 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:01:48,945 - __main__ - INFO - GradCAM: registered forward hook on layer: layer4
+2025-09-08 19:01:48,958 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:01:48,962 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:01:49,233 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:01:49] "GET / HTTP/1.1" 200 -
+2025-09-08 19:02:20,794 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:02:20] "GET / HTTP/1.1" 200 -
+2025-09-08 19:02:27,575 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 19:02:27,707 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:02:27] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:02:38,341 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:02:38] "GET / HTTP/1.1" 200 -
+2025-09-08 19:02:43,712 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 19:02:43,783 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:02:43] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:03:48,819 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.162:5000
+2025-09-08 19:03:48,819 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 19:03:48,821 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:03:55,744 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:03:55,748 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:03:55,980 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:03:55] "GET / HTTP/1.1" 200 -
+2025-09-08 19:04:21,925 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:04:21] "GET / HTTP/1.1" 200 -
+2025-09-08 19:04:28,599 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 19:04:28,764 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:04:28] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:04:33,690 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:04:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:04:35,778 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:04:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 19:04:42,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:04:42] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:04:52,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:04:52] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:04:52,957 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:04:52] "GET / HTTP/1.1" 200 -
+2025-09-08 19:04:52,973 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:04:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 19:04:54,689 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:04:54] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:05:00,643 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 19:05:00,713 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:00] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:05:01,510 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:05:02,986 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:02] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:05:11,394 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 19:05:11,464 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:11] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:05:12,208 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:12] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:05:12,991 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:12] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:05:23,196 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:23] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:05:24,732 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:24] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:05:36,653 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:36] "GET / HTTP/1.1" 200 -
+2025-09-08 19:05:40,149 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 19:05:40,217 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:40] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:05:41,447 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 19:05:41,513 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:41] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:05:42,048 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 19:05:42,112 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:42] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:05:43,176 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:43] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:05:53,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:05:59,620 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:05:59] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:06:00,531 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:06:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 19:06:07,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:06:07] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:06:16,735 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:06:16] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:06:27,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:06:27] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:06:33,338 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:06:33] "GET / HTTP/1.1" 200 -
+2025-09-08 19:06:33,360 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:06:33] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 19:10:25,279 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:10:25] "GET / HTTP/1.1" 200 -
+2025-09-08 19:10:25,294 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:10:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:10:33,309 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:10:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:10:34,834 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 19:10:34,906 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:10:34] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:10:41,305 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:10:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:10:49,296 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:10:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:10:57,308 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:10:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:11:05,295 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:11:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:11:13,295 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:11:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:11:21,173 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 19:11:21,252 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:11:21] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:11:21,296 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:11:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:11:29,295 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:11:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:11:30,086 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 19:11:30,160 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:11:30] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:11:37,295 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:11:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:11:44,133 - __main__ - WARNING - GradCAM: failed to register activation hook: cannot register a hook on a tensor that doesn't require gradient
+2025-09-08 19:11:44,207 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:11:44] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:11:45,295 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:11:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:11:53,304 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:11:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:12:02,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:12:02] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:12:10,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:12:10] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:12:18,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:12:18] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:12:26,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:12:26] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:12:34,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:12:34] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:12:42,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:12:42] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:12:50,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:12:50] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:13:08,084 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:13:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:13:49,137 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:13:50,065 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:13:58,255 - __main__ - INFO - GradCAM: Forward hook registered
+2025-09-08 19:13:58,255 - __main__ - INFO - GradCAM initialized for layer: layer4
+2025-09-08 19:13:58,264 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:13:58,269 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:14:04,461 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:14:05,328 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:14:12,662 - __main__ - INFO - GradCAM: Forward hook registered
+2025-09-08 19:14:12,662 - __main__ - INFO - GradCAM initialized for layer: layer4
+2025-09-08 19:14:12,680 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:14:12,686 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:14:12,870 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:14:12] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:14:59,844 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:15:00,666 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:15:07,951 - __main__ - INFO - GradCAM: Forward hook registered
+2025-09-08 19:15:07,951 - __main__ - INFO - GradCAM initialized for layer: layer4
+2025-09-08 19:15:07,961 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:15:07,966 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:15:08,152 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:15:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:15:08,156 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:15:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:15:08,199 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:15:08] "GET / HTTP/1.1" 200 -
+2025-09-08 19:15:08,226 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:15:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:15:11,607 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:15:11] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:15:16,218 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:15:16] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:15:25,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:15:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:15:32,218 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:15:32] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:15:40,230 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:15:40] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:15:48,218 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:15:48] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:15:56,218 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:15:56] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:16:04,219 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:16:04] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:16:13,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:16:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:16:21,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:16:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:16:29,050 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:16:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:16:37,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:16:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:16:45,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:16:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:16:53,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:16:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:16:53,649 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:16:54,474 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:17:02,674 - __main__ - INFO - GradCAM: Forward hook registered
+2025-09-08 19:17:02,674 - __main__ - INFO - GradCAM initialized for layer: layer4, fabric: False
+2025-09-08 19:17:02,683 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:17:02,687 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:17:02,847 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:17:02] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:17:05,245 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:17:05,922 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:17:14,008 - __main__ - INFO - GradCAM: Forward hook registered
+2025-09-08 19:17:14,008 - __main__ - INFO - GradCAM initialized for layer: layer4, fabric: False
+2025-09-08 19:17:14,021 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:17:14,026 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:17:14,205 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:17:14] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:17:17,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:17:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:17:25,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:17:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:17:33,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:17:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:17:41,067 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:17:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:17:49,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:17:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:17:57,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:17:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:18:05,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:18:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:18:13,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:18:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:18:21,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:18:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:18:29,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:18:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:18:37,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:18:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:18:45,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:18:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:18:53,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:18:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:19:01,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:19:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:19:09,067 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:19:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:19:17,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:19:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:19:25,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:19:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:19:33,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:19:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:19:41,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:19:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:19:48,227 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:19:48] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:19:49,463 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:19:49] "GET / HTTP/1.1" 200 -
+2025-09-08 19:19:49,479 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:19:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:19:57,487 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:19:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:20:00,453 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:20:00] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:20:05,476 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:20:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:20:13,480 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:20:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:20:15,689 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:20:15] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:20:21,478 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:20:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:20:29,490 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:20:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:20:38,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:20:38] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:20:46,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:20:46] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:20:54,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:20:54] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:21:02,074 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:21:02] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:21:07,968 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:21:08,823 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:21:15,698 - lightning.pytorch.utilities.rank_zero - INFO - You are using a CUDA device ('NVIDIA GeForce RTX 3050 Laptop GPU') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+2025-09-08 19:21:15,704 - __main__ - INFO - GradCAM: Forward hook registered
+2025-09-08 19:21:15,704 - __main__ - INFO - GradCAM initialized for layer: layer4, fabric: True
+2025-09-08 19:21:15,718 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:21:15,725 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:21:15,962 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:21:15] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:21:17,481 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:21:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:21:17,753 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:21:17] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 19:21:17,770 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:21:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:21:22,551 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:21:22] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:21:25,782 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:21:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:21:34,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:21:34] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:21:42,070 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:21:42] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:21:50,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:21:50] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:21:58,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:21:58] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:22:05,784 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:22:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:22:14,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:22:14] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:22:22,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:22:22] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:22:30,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:22:30] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:22:38,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:22:38] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:22:46,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:22:46] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:22:54,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:22:54] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:23:02,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:23:02] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:24:03,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:24:03] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:24:08,074 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:24:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:25:08,087 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:25:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:25:48,717 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:25:48] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:25:49,774 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:25:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:25:49,922 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:25:49] "GET / HTTP/1.1" 200 -
+2025-09-08 19:25:49,943 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:25:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:25:58,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:25:58] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:26:06,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:26:06] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:26:14,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:26:14] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:26:22,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:26:22] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:26:30,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:26:30] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:26:31,153 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:26:31,926 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:26:37,598 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:26:37,606 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:26:38,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:26:38] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:26:45,094 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:26:45] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-09-08 19:26:48,340 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:26:48] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:26:49,039 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:26:49] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-09-08 19:26:53,938 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:26:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:27:02,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:02] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:27:05,241 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:27:05,888 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:27:13,108 - lightning.pytorch.utilities.rank_zero - INFO - You are using a CUDA device ('NVIDIA GeForce RTX 3050 Laptop GPU') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+2025-09-08 19:27:13,113 - __main__ - INFO - GradCAM: Forward hook registered
+2025-09-08 19:27:13,113 - __main__ - INFO - GradCAM initialized for layer: layer4, fabric: True
+2025-09-08 19:27:13,129 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:27:13,134 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:27:13,365 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:27:13,765 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:13] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:27:16,778 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:16] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:27:17,368 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:17] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:27:17,546 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:17] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:27:17,711 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:17] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:27:17,891 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:17] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:27:17,954 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:27:18,045 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:18] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:27:18,218 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:18] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:27:18,375 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:18] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:27:18,547 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:18] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:27:18,731 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:18] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:27:21,719 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:27:22,539 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:27:27,432 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:27:27,439 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:27:27,575 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:27] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:27:27,581 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:27] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-09-08 19:27:34,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:34] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:27:42,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:42] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:27:50,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:50] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:27:58,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:27:58] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:28:06,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:28:06] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:28:14,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:28:14] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:28:20,843 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:28:20] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-09-08 19:28:21,938 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:28:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:28:23,142 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:28:23] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 19:28:23,154 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:28:23] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:28:26,280 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:28:26] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-09-08 19:28:31,168 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:28:31] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:28:40,089 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:28:40] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:28:48,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:28:48] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:28:56,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:28:56] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:29:04,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:29:04] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:29:12,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:29:12] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:29:15,868 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:29:15] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-09-08 19:29:19,170 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:29:19] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:29:24,309 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:29:24] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-09-08 19:29:28,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:29:28] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:29:29,846 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:29:30,379 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:29:38,015 - lightning.pytorch.utilities.rank_zero - INFO - You are using a CUDA device ('NVIDIA GeForce RTX 3050 Laptop GPU') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+2025-09-08 19:29:38,018 - __main__ - INFO - GradCAM: Forward hook registered
+2025-09-08 19:29:38,018 - __main__ - INFO - GradCAM initialized for layer: layer4, fabric: True
+2025-09-08 19:29:38,032 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:29:38,037 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:29:38,233 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:29:38] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:29:38,639 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:29:38] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:29:44,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:29:44] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:29:52,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:29:52] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:30:00,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:00] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:30:08,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:30:16,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:16] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:30:24,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:24] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:30:32,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:32] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:30:39,159 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:39] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:30:39,875 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:39] "GET / HTTP/1.1" 200 -
+2025-09-08 19:30:39,908 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:39] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:30:39,911 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:39] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:30:43,248 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:43] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:44,696 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:44] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:45,434 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:45] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:45,622 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:45] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:45,803 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:45] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:46,005 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:46] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:46,192 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:46] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:46,441 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:46] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:46,961 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:46] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:47,142 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:47] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:47,326 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:47] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:47,489 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:47] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:47,894 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:47] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:30:48,188 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:48] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:48,377 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:48] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:48,506 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:48] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:48,699 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:48] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:48,900 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:48] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:49,099 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:49] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:30:55,698 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:55] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 19:30:55,723 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:55] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:30:55,725 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:30:55] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:31:03,719 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:31:03] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:31:12,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:31:12] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:31:20,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:31:20] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:31:28,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:31:28] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:31:33,510 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:31:34,569 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:31:40,087 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:31:40,092 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:31:40,214 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:31:40] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:31:44,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:31:44] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:33:31,016 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.162:5000
+2025-09-08 19:33:31,017 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 19:33:31,017 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:33:35,945 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:33:35,953 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:33:36,094 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:33:36] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:33:44,067 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:33:44] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:33:52,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:33:52] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:34:00,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:34:00] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:34:08,095 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:34:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:34:16,069 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:34:16] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:34:24,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:34:24] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:34:32,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:34:32] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:34:40,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:34:40] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:34:48,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:34:48] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:34:56,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:34:56] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:35:04,090 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:35:04] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:35:12,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:35:12] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:35:20,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:35:20] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:35:28,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:35:28] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:35:36,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:35:36] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:35:44,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:35:44] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:35:52,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:35:52] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:36:00,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:36:00] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:36:07,734 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:36:07] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:36:15,730 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:36:15] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:36:18,524 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:36:18] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-09-08 19:36:21,135 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:36:21] "GET / HTTP/1.1" 200 -
+2025-09-08 19:36:21,152 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:36:21] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:36:21,153 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:36:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:36:29,158 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:36:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:36:38,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:36:38] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:36:46,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:36:46] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:36:54,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:36:54] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:37:02,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:37:02] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:37:10,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:37:10] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:38:06,399 - __main__ - INFO - Grad-CAM target layer: layer4.2.conv3
+2025-09-08 19:38:06,430 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.162:5000
+2025-09-08 19:38:06,430 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 19:38:06,433 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:38:15,179 - __main__ - INFO - Grad-CAM target layer: layer4.2.conv3
+2025-09-08 19:38:15,191 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:38:15,201 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:38:15,540 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:38:15] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:38:15,542 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:38:15] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:38:22,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:38:22] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:38:30,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:38:30] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:38:38,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:38:38] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:38:46,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:38:46] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:38:54,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:38:54] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:39:02,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:39:02] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:39:10,066 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:39:10] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:39:18,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:39:18] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:39:26,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:39:26] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:39:33,151 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:39:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:39:42,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:39:42] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:39:49,156 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:39:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:39:49,840 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:39:49] "GET / HTTP/1.1" 200 -
+2025-09-08 19:39:49,856 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:39:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:39:56,677 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:39:56] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:39:57,864 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:39:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:40:06,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:06] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:40:09,177 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:09] "GET / HTTP/1.1" 200 -
+2025-09-08 19:40:09,197 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:40:16,700 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:16] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:40:17,194 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:40:26,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:26] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:40:31,451 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:31] "GET / HTTP/1.1" 200 -
+2025-09-08 19:40:31,478 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:31] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:40:31,479 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:31] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:40:32,347 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:32] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 19:40:32,368 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:32] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:40:32,370 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:32] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:40:35,495 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:35] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:40:40,372 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:40] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:40:49,080 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:40:57,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:40:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:41:03,828 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:41:04,920 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:41:10,977 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:41:10,982 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:41:11,112 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:11] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:41:12,369 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:12] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:41:13,363 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:13] "GET / HTTP/1.1" 200 -
+2025-09-08 19:41:13,382 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:13] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:41:13,384 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:41:21,460 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:41:22,108 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:41:29,356 - __main__ - INFO - Grad-CAM target layer: layer4.2.conv3
+2025-09-08 19:41:29,365 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:41:29,370 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:41:29,552 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:41:29,558 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:41:32,980 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:32] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 19:41:32,998 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:32] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:41:32,999 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:32] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:41:35,301 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:35] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 19:41:35,318 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:35] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:41:35,319 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:35] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:41:35,665 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:35] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 19:41:35,686 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:35] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:41:35,686 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:35] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:41:35,845 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:35] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 19:41:35,870 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:35] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:41:35,870 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:35] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:41:37,975 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:41:38,751 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:41:46,553 - __main__ - INFO - Grad-CAM target layer: layer4.2.conv3
+2025-09-08 19:41:46,564 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:41:46,569 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:41:46,744 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:46] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:41:47,151 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:47] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:41:51,864 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:51] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:41:59,872 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:41:59] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:42:07,872 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:42:07] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:42:16,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:42:16] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:42:24,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:42:24] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:42:32,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:42:32] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:42:40,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:42:40] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:42:47,865 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:42:47] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:42:56,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:42:56] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:43:04,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:43:04] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:43:12,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:43:12] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:43:20,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:43:20] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:43:28,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:43:28] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:43:36,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:43:36] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:43:44,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:43:44] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:43:52,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:43:52] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:44:00,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:44:00] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:44:08,077 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:44:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:44:16,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:44:16] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:44:24,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:44:24] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:44:32,074 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:44:32] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:44:40,068 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:44:40] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:44:48,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:44:48] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:44:56,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:44:56] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:45:04,066 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:45:04] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:45:12,066 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:45:12] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:45:20,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:45:20] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:45:28,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:45:28] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:45:36,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:45:36] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:45:44,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:45:44] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:45:52,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:45:52] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:45:55,198 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:45:55] "GET / HTTP/1.1" 200 -
+2025-09-08 19:45:55,218 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:45:55] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:45:55,219 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:45:55] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:45:57,997 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:45:57] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:46:03,214 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:46:03] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:46:11,222 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:46:11] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:46:20,007 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:46:20] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:46:28,070 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:46:28] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:46:36,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:46:36] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:46:44,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:46:44] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:46:52,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:46:52] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:47:00,068 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:47:00] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:47:08,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:47:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:47:16,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:47:16] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:47:24,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:47:24] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:47:32,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:47:32] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:47:40,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:47:40] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:47:48,066 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:47:48] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:47:56,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:47:56] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:48:04,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:48:04] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:48:12,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:48:12] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:48:20,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:48:20] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:48:28,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:48:28] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:48:36,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:48:36] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:48:44,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:48:44] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:48:52,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:48:52] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:49:00,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:49:00] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:49:08,079 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:49:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:49:15,141 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:49:16,401 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:49:22,528 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:49:22,532 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:49:22,657 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:49:22] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:49:24,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:49:24] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:49:32,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:49:32] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:49:32,271 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:49:33,110 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:49:38,541 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:49:38,546 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:49:40,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:49:40] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:49:48,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:49:48] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:49:53,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:49:53] "GET / HTTP/1.1" 200 -
+2025-09-08 19:49:53,084 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:49:53] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:49:53,086 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:49:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:49:56,915 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:49:56] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 19:49:56,936 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:49:56] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:49:56,937 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:49:56] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:50:12,981 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:50:13,497 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:50:21,439 - __main__ - INFO - Grad-CAM target layer: layer4.2.conv3
+2025-09-08 19:50:21,448 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:50:21,454 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:50:21,718 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:50:21,724 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:50:21,794 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:21] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 19:50:21,814 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:21] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:50:21,817 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:50:25,150 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:25] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-08 19:50:25,176 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:50:25,176 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:25] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:50:28,624 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 19:50:28,632 - __main__ - INFO - Generated base64 image, size: 109272 bytes
+2025-09-08 19:50:28,683 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:28] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:50:33,184 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:50:35,362 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 19:50:41,194 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:50:49,177 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:50:58,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:50:58] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:51:06,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:51:06] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:51:14,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:51:14] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:51:21,173 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:51:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:51:27,299 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:51:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 19:51:29,183 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:51:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:51:38,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:51:38] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:51:45,172 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:51:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:51:53,183 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:51:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:52:01,173 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:52:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:52:09,174 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:52:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:52:11,356 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:52:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 19:52:17,622 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:52:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:52:26,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:52:26] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:52:27,818 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:52:27] "GET / HTTP/1.1" 200 -
+2025-09-08 19:52:27,836 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:52:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 19:52:35,698 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 19:52:35,707 - __main__ - INFO - Generated base64 image, size: 111048 bytes
+2025-09-08 19:52:35,800 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:52:35] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:52:48,415 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 19:52:48,423 - __main__ - INFO - Generated base64 image, size: 111048 bytes
+2025-09-08 19:52:48,481 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:52:48] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:54:26,768 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:54:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 19:54:41,642 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:54:41] "GET / HTTP/1.1" 200 -
+2025-09-08 19:54:41,668 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:54:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 19:54:41,686 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:54:41] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:54:41,690 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:54:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:54:46,221 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 19:54:46,228 - __main__ - INFO - Generated base64 image, size: 99796 bytes
+2025-09-08 19:54:46,325 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:54:46] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:54:49,694 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:54:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:54:57,690 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:54:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:55:05,687 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:55:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:55:14,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:55:14] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:55:21,684 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:55:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:55:29,683 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:55:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:55:37,691 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:55:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:55:45,695 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:55:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:55:54,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:55:54] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:56:02,069 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:56:02] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:56:10,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:56:10] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:56:18,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:56:18] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:56:26,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:56:26] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:56:34,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:56:34] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:56:35,907 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:56:35] "GET / HTTP/1.1" 200 -
+2025-09-08 19:56:35,930 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:56:35] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:56:35,931 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:56:35] "GET /debug HTTP/1.1" 200 -
+2025-09-08 19:56:40,029 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 19:56:40,035 - __main__ - INFO - Generated base64 image, size: 109272 bytes
+2025-09-08 19:56:40,140 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:56:40] "POST /predict HTTP/1.1" 200 -
+2025-09-08 19:56:43,927 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:56:43] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:56:52,081 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:56:52] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:57:00,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:57:00] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:57:08,069 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:57:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:57:16,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:57:16] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:57:16,764 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 19:57:17,760 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 19:57:27,464 - __main__ - INFO - Grad-CAM target layer: layer4.2.conv3
+2025-09-08 19:57:27,477 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 19:57:27,481 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 19:57:27,649 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:57:27] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:57:32,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:57:32] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:57:40,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:57:40] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:57:48,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:57:48] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:57:56,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:57:56] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:58:04,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:58:04] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:58:12,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:58:12] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:58:20,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:58:20] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:58:28,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:58:28] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:58:36,066 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:58:36] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:58:44,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:58:44] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:58:52,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:58:52] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:59:00,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:59:00] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:59:08,078 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:59:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:59:16,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:59:16] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:59:24,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:59:24] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:59:32,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:59:32] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:59:40,066 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:59:40] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:59:48,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:59:48] "GET /performance HTTP/1.1" 200 -
+2025-09-08 19:59:56,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 19:59:56] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:00:04,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:00:04] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:00:12,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:00:12] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:00:20,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:00:20] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:00:28,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:00:28] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:00:36,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:00:36] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:00:44,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:00:44] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:00:52,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:00:52] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:01:00,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:01:00] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:01:08,088 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:01:08] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:01:16,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:01:16] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:01:24,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:01:24] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:01:30,758 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:01:30] "GET / HTTP/1.1" 200 -
+2025-09-08 20:01:31,015 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:01:31] "GET /debug HTTP/1.1" 200 -
+2025-09-08 20:01:31,017 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:01:31] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:01:39,014 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:01:39] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:01:43,259 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:01:43,268 - __main__ - INFO - Generated base64 image, size: 78928 bytes
+2025-09-08 20:01:43,280 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:01:43] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:01:47,018 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:01:47] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:01:53,164 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:01:53,173 - __main__ - INFO - Generated base64 image, size: 100000 bytes
+2025-09-08 20:01:53,281 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:01:53] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:01:55,020 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:01:55] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:02:03,017 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:02:03] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:02:11,019 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:02:11] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:02:18,374 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:02:18] "GET / HTTP/1.1" 200 -
+2025-09-08 20:02:18,408 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:02:18] "GET /debug HTTP/1.1" 200 -
+2025-09-08 20:02:18,410 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:02:18] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:02:25,384 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:02:25] "GET / HTTP/1.1" 200 -
+2025-09-08 20:02:25,410 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:02:25] "GET /debug HTTP/1.1" 200 -
+2025-09-08 20:02:25,411 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:02:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:02:33,415 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:02:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:02:34,395 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:02:34,400 - __main__ - INFO - Generated base64 image, size: 107952 bytes
+2025-09-08 20:02:34,503 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:02:34] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:02:42,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:02:42] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:02:50,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:02:50] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:02:58,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:02:58] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:03:06,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:03:06] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:03:14,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:03:14] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:03:22,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:03:22] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:03:30,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:03:30] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:03:38,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:03:38] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:03:46,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:03:46] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:03:54,050 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:03:54] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:04:02,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:04:02] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:04:10,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:04:10] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:04:18,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:04:18] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:04:26,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:04:26] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:04:34,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:04:34] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:04:42,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:04:42] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:04:50,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:04:50] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:04:58,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:04:58] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:05:06,050 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:05:06] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:05:14,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:05:14] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:05:22,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:05:22] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:05:30,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:05:30] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:05:38,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:05:38] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:05:46,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:05:46] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:05:54,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:05:54] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:06:02,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:06:02] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:06:10,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:06:10] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:06:18,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:06:18] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:06:26,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:06:26] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:06:34,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:06:34] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:06:42,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:06:42] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:06:49,625 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:06:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:06:50,705 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:06:50] "GET / HTTP/1.1" 200 -
+2025-09-08 20:06:50,729 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:06:50] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:06:50,733 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:06:50] "GET /debug HTTP/1.1" 200 -
+2025-09-08 20:06:55,538 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:06:55,546 - __main__ - INFO - Generated base64 image, size: 100000 bytes
+2025-09-08 20:06:55,631 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:06:55] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:06:58,731 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:06:58] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:07:06,743 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:07:06] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:07:15,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:07:15] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:07:23,066 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:07:23] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:07:31,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:07:31] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:07:39,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:07:39] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:07:47,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:07:47] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:07:55,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:07:55] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:08:03,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:08:03] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:08:11,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:08:11] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:08:19,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:08:19] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:08:27,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:08:27] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:08:35,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:08:35] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:08:43,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:08:43] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:08:51,050 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:08:51] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:08:59,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:08:59] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:09:07,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:09:07] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:09:15,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:09:15] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:09:23,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:09:23] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:09:31,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:09:31] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:09:39,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:09:39] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:09:47,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:09:47] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:09:55,069 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:09:55] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:10:03,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:10:03] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:10:11,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:10:11] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:10:19,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:10:19] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:10:27,075 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:10:27] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:10:35,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:10:35] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:10:43,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:10:43] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:10:51,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:10:51] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:10:59,066 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:10:59] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:11:07,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:11:07] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:11:15,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:11:15] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:11:23,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:11:23] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:11:31,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:11:31] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:11:39,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:11:39] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:11:47,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:11:47] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:11:55,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:11:55] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:12:03,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:12:03] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:12:11,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:12:11] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:12:19,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:12:19] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:12:27,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:12:27] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:12:35,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:12:35] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:12:43,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:12:43] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:12:51,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:12:51] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:12:59,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:12:59] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:13:06,730 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:13:06] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:13:14,748 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:13:14] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:13:23,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:13:23] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:13:31,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:13:31] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:13:39,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:13:39] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:13:47,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:13:47] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:13:55,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:13:55] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:14:03,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:14:03] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:14:11,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:14:11] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:14:19,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:14:19] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:14:27,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:14:27] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:14:35,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:14:35] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:14:43,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:14:43] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:14:51,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:14:51] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:14:59,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:14:59] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:15:07,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:15:07] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:15:15,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:15:15] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:15:23,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:15:23] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:15:31,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:15:31] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:15:39,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:15:39] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:15:46,396 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:15:46] "GET / HTTP/1.1" 200 -
+2025-09-08 20:15:46,431 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:15:46] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:15:46,431 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:15:46] "GET /debug HTTP/1.1" 200 -
+2025-09-08 20:15:54,112 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:15:54,121 - __main__ - INFO - Generated base64 image, size: 107952 bytes
+2025-09-08 20:15:54,215 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:15:54] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:15:54,430 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:15:54] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:16:03,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:03] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:16:08,991 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:08] "GET / HTTP/1.1" 200 -
+2025-09-08 20:16:09,018 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:16:09,018 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:09] "GET /debug HTTP/1.1" 200 -
+2025-09-08 20:16:17,017 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:16:20,191 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:16:20,201 - __main__ - INFO - Generated base64 image, size: 76300 bytes
+2025-09-08 20:16:20,258 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:20] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:16:25,029 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:16:33,030 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:16:40,860 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:16:40,867 - __main__ - INFO - Generated base64 image, size: 120964 bytes
+2025-09-08 20:16:40,958 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:40] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:16:41,021 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:16:47,557 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:16:47,567 - __main__ - INFO - Generated base64 image, size: 97936 bytes
+2025-09-08 20:16:47,652 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:47] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:16:49,018 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:16:54,240 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:16:54,248 - __main__ - INFO - Generated base64 image, size: 103872 bytes
+2025-09-08 20:16:54,336 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:54] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:16:57,031 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:16:59,203 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:16:59,209 - __main__ - INFO - Generated base64 image, size: 105300 bytes
+2025-09-08 20:16:59,245 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:16:59] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:17:03,399 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:17:03,408 - __main__ - INFO - Generated base64 image, size: 111016 bytes
+2025-09-08 20:17:03,455 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:17:03] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:17:05,024 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:17:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:17:13,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:17:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:17:21,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:17:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:17:26,004 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\Python\\Project\\durianLeaf\\web\\app.py', reloading
+2025-09-08 20:17:27,436 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 20:17:36,451 - __main__ - INFO - Grad-CAM target layer: layer4.2.conv3
+2025-09-08 20:17:36,463 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 20:17:36,467 - werkzeug - INFO -  * Debugger PIN: 131-966-756
+2025-09-08 20:17:36,630 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:17:36] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:17:37,021 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:17:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:17:45,023 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:17:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:17:53,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:17:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:17:56,672 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:17:56,678 - __main__ - INFO - Generated base64 image, size: 111016 bytes
+2025-09-08 20:17:56,740 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:17:56] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:18:01,066 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:18:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:18:09,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:18:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:18:17,039 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:18:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:18:25,020 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:18:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:18:33,032 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:18:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:18:41,022 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:18:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:18:49,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:18:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:18:57,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:18:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:19:05,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:19:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:19:13,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:19:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:19:21,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:19:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:19:29,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:19:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:19:37,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:19:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:19:45,050 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:19:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:19:53,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:19:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:20:01,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:20:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:20:09,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:20:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:20:17,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:20:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:20:25,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:20:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:20:33,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:20:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:20:41,050 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:20:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:20:49,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:20:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:20:57,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:20:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:21:05,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:21:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:21:13,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:21:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:21:21,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:21:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:21:29,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:21:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:21:37,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:21:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:21:45,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:21:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:21:53,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:21:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:22:01,066 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:22:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:22:09,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:22:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:22:17,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:22:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:22:25,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:22:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:22:33,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:22:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:22:41,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:22:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:22:49,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:22:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:22:57,028 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:22:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:23:05,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:23:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:23:13,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:23:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:23:21,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:23:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:23:29,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:23:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:23:37,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:23:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:23:45,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:23:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:23:53,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:23:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:24:01,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:24:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:24:09,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:24:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:24:17,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:24:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:24:25,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:24:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:24:33,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:24:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:24:41,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:24:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:24:49,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:24:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:24:57,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:24:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:25:05,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:25:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:25:13,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:25:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:25:21,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:25:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:25:29,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:25:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:25:37,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:25:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:25:45,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:25:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:25:53,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:25:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:26:01,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:26:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:26:09,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:26:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:26:17,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:26:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:26:25,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:26:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:26:33,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:26:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:26:41,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:26:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:26:49,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:26:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:26:57,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:26:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:27:05,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:27:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:27:13,050 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:27:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:27:21,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:27:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:27:29,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:27:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:27:37,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:27:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:27:45,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:27:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:27:53,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:27:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:28:01,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:28:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:28:09,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:28:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:28:17,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:28:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:28:25,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:28:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:28:33,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:28:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:28:41,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:28:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:28:49,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:28:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:28:57,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:28:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:29:05,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:29:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:29:13,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:29:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:29:21,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:29:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:29:29,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:29:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:29:37,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:29:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:29:45,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:29:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:29:53,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:29:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:30:01,066 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:30:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:30:09,067 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:30:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:30:17,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:30:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:30:25,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:30:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:30:33,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:30:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:30:41,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:30:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:30:49,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:30:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:30:57,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:30:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:31:05,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:31:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:31:13,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:31:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:31:21,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:31:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:31:29,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:31:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:31:37,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:31:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:31:45,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:31:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:31:53,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:31:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:32:01,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:32:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:32:09,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:32:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:32:17,033 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:32:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:32:25,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:32:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:32:33,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:32:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:32:41,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:32:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:32:49,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:32:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:32:57,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:32:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:33:05,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:33:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:33:13,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:33:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:33:21,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:33:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:33:29,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:33:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:33:37,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:33:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:33:45,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:33:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:33:53,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:33:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:34:01,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:34:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:34:09,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:34:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:34:17,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:34:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:34:25,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:34:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:34:33,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:34:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:34:41,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:34:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:34:49,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:34:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:34:57,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:34:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:35:05,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:35:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:35:13,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:35:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:35:21,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:35:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:35:29,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:35:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:35:37,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:35:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:35:45,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:35:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:35:53,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:35:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:36:01,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:36:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:36:09,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:36:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:36:17,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:36:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:36:25,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:36:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:36:33,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:36:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:36:41,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:36:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:36:49,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:36:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:36:57,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:36:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:37:05,066 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:37:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:37:13,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:37:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:37:21,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:37:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:37:29,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:37:29] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:37:37,054 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:37:37] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:37:45,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:37:45] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:37:53,055 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:37:53] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:38:01,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:38:01] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:38:09,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:38:09] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:38:17,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:38:17] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:38:25,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:38:25] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:38:33,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:38:33] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:38:41,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:38:41] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:38:49,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:38:49] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:38:57,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:38:57] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:39:05,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:39:05] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:39:13,035 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:39:13] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:39:18,360 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:39:18,365 - __main__ - INFO - Generated base64 image, size: 111016 bytes
+2025-09-08 20:39:18,432 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:39:18] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:39:19,415 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-08 20:39:19,420 - __main__ - INFO - Generated base64 image, size: 111016 bytes
+2025-09-08 20:39:19,428 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:39:19] "POST /predict HTTP/1.1" 200 -
+2025-09-08 20:39:21,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:39:21] "GET /performance HTTP/1.1" 200 -
+2025-09-08 20:39:29,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:39:29] "GET /performance HTTP/1.1" 200 -
