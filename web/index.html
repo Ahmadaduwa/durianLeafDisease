@@ -1,0 +1,1027 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ทำนายโรคใบทุเรียน — AI Analysis Dashboard</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      margin: 0; padding: 0; 
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); 
+      color: #e2e8f0; 
+      min-height: 100vh;
+    }
+    .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+    
+    /* Header */
+    .header { text-align: center; margin-bottom: 30px; }
+    .header h1 { 
+      margin: 0 0 10px; font-size: 36px; 
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .header p { color: #cbd5e1; font-size: 16px; }
+    
+    /* Tabs */
+    .tabs { 
+      display: flex; gap: 0; margin-bottom: 20px; 
+      background: #1e293b; border-radius: 12px; padding: 4px;
+      overflow-x: auto;
+    }
+    .tab { 
+      flex: 1; padding: 12px 20px; text-align: center; cursor: pointer; 
+      border-radius: 8px; transition: all 0.3s ease;
+      font-weight: 600; white-space: nowrap; min-width: 120px;
+    }
+    .tab.active { 
+      background: linear-gradient(135deg, #22c55e, #16a34a); 
+      color: white; box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+    }
+    .tab:not(.active):hover { background: #2d3748; }
+    
+    /* Content panels */
+    .panel { display: none; }
+    .panel.active { display: block; }
+    
+    /* Input methods */
+    .input-methods {
+      display: flex; gap: 12px; margin-bottom: 20px;
+    }
+    .method-btn {
+      flex: 1; padding: 12px 16px; border: 2px solid #334155;
+      background: #111827; color: #e2e8f0; border-radius: 8px;
+      cursor: pointer; transition: all 0.3s ease; text-align: center;
+    }
+    .method-btn.active {
+      border-color: #22c55e; background: rgba(34, 197, 94, 0.1);
+      color: #22c55e;
+    }
+    .method-btn:hover:not(.active) {
+      border-color: #475569; background: #1e293b;
+    }
+    
+    /* Uploader */
+    .uploader { 
+      border: 2px dashed #334155; border-radius: 12px; padding: 30px; 
+      text-align: center; background: #111827; cursor: pointer; 
+      transition: all 0.3s ease; margin-bottom: 20px;
+    }
+    .uploader.dragover { 
+      border-color: #22c55e; background: #0b1220; 
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+    }
+    .uploader input[type="file"] { display: none; }
+    .uploader-icon { font-size: 48px; margin-bottom: 16px; opacity: 0.7; }
+    
+    /* Camera */
+    .camera-container {
+      background: #111827; border-radius: 12px; padding: 20px;
+      margin-bottom: 20px; text-align: center;
+    }
+    .camera-preview {
+      position: relative; display: inline-block; border-radius: 8px;
+      overflow: hidden; max-width: 100%;
+    }
+    .camera-preview video, .camera-preview canvas {
+      display: block; width: 100%; max-width: 500px; height: auto;
+      border-radius: 8px;
+    }
+    .camera-controls {
+      margin-top: 16px; display: flex; justify-content: center;
+      gap: 12px; flex-wrap: wrap;
+    }
+    .camera-btn {
+      padding: 8px 16px; background: #334155; border: none;
+      color: #e2e8f0; border-radius: 6px; cursor: pointer;
+      transition: all 0.3s ease; font-size: 14px;
+    }
+    .camera-btn:hover { background: #475569; }
+    .camera-btn.primary {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: white; font-weight: 600;
+    }
+    .camera-btn:disabled {
+      opacity: 0.5; cursor: not-allowed;
+    }
+    
+    /* Preview and Results */
+    .analysis-section {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      margin-bottom: 20px;
+    }
+    .image-panel, .results-panel {
+      background: #1e293b; border-radius: 12px; padding: 20px;
+    }
+    .image-panel h3, .results-panel h3 {
+      margin: 0 0 16px; color: #22c55e;
+    }
+    .image-display {
+      text-align: center; margin-bottom: 16px;
+    }
+    .image-display img {
+      max-width: 100%; height: auto; border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .image-tabs {
+      display: flex; gap: 8px; margin-bottom: 16px;
+    }
+    .image-tab {
+      padding: 6px 12px; background: #334155; border: none;
+      color: #e2e8f0; border-radius: 6px; cursor: pointer;
+      font-size: 12px; transition: all 0.3s ease;
+    }
+    .image-tab.active {
+      background: #22c55e; color: white;
+    }
+    
+    /* Settings */
+    .settings-section {
+      background: #1e293b; border-radius: 12px; padding: 20px;
+      margin-bottom: 20px;
+    }
+    .settings-row {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 12px; padding: 8px 0;
+    }
+    .settings-row:last-child { margin-bottom: 0; }
+    .setting-label {
+      font-weight: 500; color: #cbd5e1;
+    }
+    .setting-control {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .toggle-switch {
+      position: relative; width: 48px; height: 24px;
+      background: #475569; border-radius: 12px; cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .toggle-switch.active {
+      background: #22c55e;
+    }
+    .toggle-switch::after {
+      content: ''; position: absolute; top: 2px; left: 2px;
+      width: 20px; height: 20px; background: white;
+      border-radius: 50%; transition: all 0.3s ease;
+    }
+    .toggle-switch.active::after {
+      transform: translateX(24px);
+    }
+    
+    button { 
+      background: linear-gradient(135deg, #22c55e, #16a34a); 
+      border: none; color: white; padding: 12px 24px; 
+      font-weight: 700; border-radius: 8px; cursor: pointer; 
+      font-size: 16px; transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+    }
+    button:hover:not(:disabled) { 
+      transform: translateY(-2px); 
+      box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
+    }
+    button:disabled { 
+      opacity: 0.6; cursor: not-allowed; 
+      transform: none; box-shadow: none;
+    }
+    
+    .prediction-row { 
+      display: flex; justify-content: space-between; align-items: center; 
+      padding: 12px 0; border-bottom: 1px dashed #1f2937;
+    }
+    .prediction-row:last-child { border-bottom: none; }
+    .prediction-label { font-weight: 700; min-width: 160px; }
+    .prob-bar { 
+      height: 12px; background: #253046; border-radius: 6px; 
+      overflow: hidden; margin: 0 16px; flex: 1; position: relative;
+    }
+    .prob-bar > i { 
+      display: block; height: 100%; 
+      background: linear-gradient(90deg, #22c55e, #16a34a); 
+      width: 0%; transition: width 0.8s ease;
+    }
+    .prob-percent { 
+      width: 60px; text-align: right; font-weight: 600;
+      color: #22c55e;
+    }
+    
+    /* Performance Dashboard */
+    .stats-grid { 
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 20px; margin-bottom: 30px;
+    }
+    .stat-card { 
+      background: linear-gradient(135deg, #1e293b, #334155); 
+      padding: 24px; border-radius: 12px; text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    .stat-card h3 { margin: 0 0 8px; font-size: 14px; opacity: 0.8; }
+    .stat-card .value { 
+      font-size: 32px; font-weight: bold; margin: 8px 0;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .stat-card .unit { font-size: 14px; opacity: 0.7; }
+    .stat-card.error .value { color: #ef4444; }
+    .stat-card.warning .value { color: #f59e0b; }
+    
+    .charts-section { margin-bottom: 30px; }
+    .chart-container { 
+      background: #1e293b; padding: 20px; border-radius: 12px; 
+      margin-bottom: 20px;
+    }
+    .chart-title { margin: 0 0 20px; color: #22c55e; font-size: 18px; }
+    
+    /* Error logs */
+    .error-log { 
+      background: #1e293b; padding: 16px; border-radius: 8px; 
+      margin: 8px 0; border-left: 4px solid #ef4444;
+    }
+    .error-time { color: #94a3b8; font-size: 12px; }
+    .error-msg { color: #fca5a5; margin-top: 4px; }
+    
+    /* Class distribution */
+    .class-item { 
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 8px 0; border-bottom: 1px dashed #334155;
+    }
+    .class-item:last-child { border-bottom: none; }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container { padding: 15px; }
+      .analysis-section { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .tabs { flex-direction: column; }
+      .input-methods { flex-direction: column; }
+      .camera-controls { justify-content: center; }
+    }
+    
+    /* Loading animation */
+    .loading { 
+      display: inline-block; width: 20px; height: 20px; 
+      border: 2px solid #334155; border-radius: 50%; 
+      border-top-color: #22c55e; animation: spin 1s ease-in-out infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    
+    /* Success/Error indicators */
+    .status { padding: 8px 12px; border-radius: 6px; font-size: 14px; }
+    .status.success { background: rgba(34, 197, 94, 0.1); color: #22c55e; }
+    .status.error { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+    .status.warning { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+    
+    /* File info */
+    .file-info {
+      background: #111827; border-radius: 8px; padding: 16px;
+      margin-bottom: 16px; font-size: 14px;
+    }
+    .file-info-row {
+      display: flex; justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .file-info-row:last-child { margin-bottom: 0; }
+    
+    /* Timing info */
+    .timing-info {
+      background: #111827; border-radius: 8px; padding: 16px;
+      margin-top: 16px; font-size: 14px;
+    }
+    .timing-row {
+      display: flex; justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .timing-row:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🌿 ระบบทำนายโรคใบทุเรียน</h1>
+      <p>AI-Powered Durian Leaf Disease Detection with Grad-CAM Visualization</p>
+    </div>
+
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('predict')">🔍 ทำนาย</div>
+      <div class="tab" onclick="switchTab('performance')">📊 Performance</div>
+      <div class="tab" onclick="switchTab('logs')">📋 Logs</div>
+    </div>
+
+    <!-- Predict Panel -->
+    <div class="panel active" id="predict-panel">
+      <!-- Settings Section -->
+      <div class="settings-section">
+        <h3 style="margin: 0 0 16px; color: #22c55e;">⚙️ การตั้งค่า</h3>
+        <div class="settings-row">
+          <span class="setting-label">🔍 Grad-CAM Analysis</span>
+          <div class="setting-control">
+            <div class="toggle-switch active" id="gradcam-toggle" onclick="toggleGradCAM()"></div>
+            <span id="gradcam-status">เปิด</span>
+          </div>
+        </div>
+        <div class="settings-row">
+          <span class="setting-label">📸 Mirror Camera</span>
+          <div class="setting-control">
+            <div class="toggle-switch" id="mirror-toggle" onclick="toggleMirror()"></div>
+            <span id="mirror-status">ปิด</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Methods -->
+      <div class="input-methods">
+        <div class="method-btn active" onclick="switchInputMethod('file')">
+          📁 อัปโหลดไฟล์
+        </div>
+        <div class="method-btn" onclick="switchInputMethod('camera')">
+          📷 ใช้กล้อง
+        </div>
+      </div>
+
+      <!-- File Upload -->
+      <div class="input-section" id="file-section">
+        <div class="uploader" id="dropzone">
+          <input type="file" id="file-input" accept="image/*" />
+          <div class="uploader-icon">📸</div>
+          <p><strong>ลากและวางรูป หรือคลิกเพื่อเลือกไฟล์</strong></p>
+          <p style="font-size: 14px; opacity: 0.7;">รองรับ: JPG, PNG, BMP, WebP</p>
+        </div>
+      </div>
+
+      <!-- Camera Section -->
+      <div class="input-section" id="camera-section" style="display: none;">
+        <div class="camera-container">
+          <div class="camera-preview">
+            <video id="camera-video" autoplay muted style="display: none;"></video>
+            <canvas id="camera-canvas" style="display: none;"></canvas>
+            <div id="camera-placeholder" style="padding: 60px 20px; background: #111827; border: 2px dashed #334155; border-radius: 8px;">
+              <div style="font-size: 48px; opacity: 0.5;">📷</div>
+              <p style="margin: 16px 0 8px; opacity: 0.8;">คลิก "เปิดกล้อง" เพื่อเริ่มใช้งาน</p>
+              <p style="font-size: 14px; opacity: 0.6;">ต้องอนุญาตการเข้าถึงกล้องในเบราว์เซอร์</p>
+            </div>
+          </div>
+          <div class="camera-controls">
+            <button class="camera-btn" id="start-camera-btn" onclick="startCamera()">🟢 เปิดกล้อง</button>
+            <button class="camera-btn" id="stop-camera-btn" onclick="stopCamera()" style="display: none;">🔴 ปิดกล้อง</button>
+            <button class="camera-btn primary" id="capture-btn" onclick="captureImage()" disabled>📸 ถ่ายรูป</button>
+            <button class="camera-btn" id="retake-btn" onclick="retakeImage()" style="display: none;">🔄 ถ่ายใหม่</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Analysis Section -->
+      <div class="analysis-section" id="analysis-section" style="display: none;">
+        <div class="image-panel">
+          <h3>🖼️ รูปภาพ</h3>
+          <div class="image-tabs">
+            <button class="image-tab active" onclick="switchImageView('original')">ต้นฉบับ</button>
+            <button class="image-tab" onclick="switchImageView('gradcam')" id="gradcam-tab" style="display: none;">Grad-CAM</button>
+          </div>
+          <div class="image-display">
+            <img id="original-image" alt="Original" />
+            <img id="gradcam-image" alt="Grad-CAM" style="display: none;" />
+          </div>
+          <div class="file-info" id="file-info">
+            <div class="file-info-row">
+              <strong>ชื่อไฟล์:</strong>
+              <span id="file-name">-</span>
+            </div>
+            <div class="file-info-row">
+              <strong>ขนาด:</strong>
+              <span id="file-size">-</span>
+            </div>
+            <div class="file-info-row">
+              <strong>สถานะ:</strong>
+              <span id="file-status" class="status">-</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-panel">
+          <h3>🎯 ผลการทำนาย</h3>
+          <div id="prediction-results">
+            <p style="opacity: 0.7; text-align: center;">กดปุ่ม "ทำนาย" เพื่อเริ่มวิเคราะห์</p>
+          </div>
+          <div class="timing-info" id="timing-info" style="display: none;">
+            <div class="timing-row">
+              <strong>⏱️ เวลาทั้งหมด:</strong>
+              <span id="total-time">-</span>
+            </div>
+            <div class="timing-row">
+              <strong>🔧 Preprocessing:</strong>
+              <span id="preprocess-time">-</span>
+            </div>
+            <div class="timing-row">
+              <strong>🧠 Inference:</strong>
+              <span id="inference-time">-</span>
+            </div>
+            <div class="timing-row" id="gradcam-timing" style="display: none;">
+              <strong>🔍 Grad-CAM:</strong>
+              <span id="gradcam-time">-</span>
+            </div>
+          </div>
+          <button id="predict-btn" onclick="predict()" style="width: 100%; margin-top: 16px;" disabled>
+            🚀 ทำนาย
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Performance Panel -->
+    <div class="panel" id="performance-panel">
+      <div class="stats-grid" id="stats-grid">
+        <div class="stat-card">
+          <h3>Total Predictions</h3>
+          <div class="value" id="total-predictions">-</div>
+          <div class="unit">requests</div>
+        </div>
+        <div class="stat-card">
+          <h3>Average Latency</h3>
+          <div class="value" id="avg-latency">-</div>
+          <div class="unit">ms</div>
+        </div>
+        <div class="stat-card">
+          <h3>Success Rate</h3>
+          <div class="value" id="success-rate">-</div>
+          <div class="unit">%</div>
+        </div>
+        <div class="stat-card">
+          <h3>Average Confidence</h3>
+          <div class="value" id="avg-confidence">-</div>
+          <div class="unit">%</div>
+        </div>
+        <div class="stat-card">
+          <h3>Grad-CAM Time</h3>
+          <div class="value" id="avg-gradcam-time">-</div>
+          <div class="unit">ms</div>
+        </div>
+      </div>
+
+      <div class="charts-section">
+        <div class="chart-container">
+          <h3 class="chart-title">📈 Class Distribution</h3>
+          <div id="class-distribution">
+            <p style="opacity: 0.7; text-align: center;">No data</p>
+          </div>
+        </div>
+
+        <div class="chart-container">
+          <h3 class="chart-title">⚡ Performance Metrics</h3>
+          <div id="performance-metrics">
+            <p>Min Latency: <span id="min-latency">-</span> ms</p>
+            <p>Max Latency: <span id="max-latency">-</span> ms</p>
+            <p>Error Rate: <span id="error-rate">-</span>%</p>
+          </div>
+        </div>
+      </div>
+
+      <button onclick="refreshPerformanceData()" style="margin-bottom: 20px;">
+        🔄 Refresh Data
+      </button>
+    </div>
+
+    <!-- Logs Panel -->
+    <div class="panel" id="logs-panel">
+      <div class="chart-container">
+        <h3 class="chart-title">🚨 Recent Errors</h3>
+        <div id="error-logs">
+          <p style="opacity: 0.7; text-align: center;">No errors to display</p>
+        </div>
+      </div>
+      
+      <div class="chart-container">
+        <h3 class="chart-title">💾 System Metrics</h3>
+        <div id="system-metrics">
+          <p style="opacity: 0.7; text-align: center;">Loading system metrics...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Global variables
+    let currentFile = null;
+    let currentImageData = null;
+    let performanceData = null;
+    let camera = {
+      stream: null,
+      video: null,
+      canvas: null,
+      context: null,
+      isActive: false,
+      isMirrored: false
+    };
+    let settings = {
+      gradcamEnabled: true,
+      mirrorEnabled: false
+    };
+
+    // Initialize camera elements
+    function initializeCamera() {
+      camera.video = document.getElementById('camera-video');
+      camera.canvas = document.getElementById('camera-canvas');
+      camera.context = camera.canvas.getContext('2d');
+    }
+
+    // Tab switching
+    function switchTab(tabName) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(panel => panel.classList.remove('active'));
+      
+      const tabIndex = tabName === 'predict' ? 1 : tabName === 'performance' ? 2 : 3;
+      document.querySelector(`.tab:nth-child(${tabIndex})`).classList.add('active');
+      document.getElementById(`${tabName}-panel`).classList.add('active');
+      
+      if (tabName === 'performance') {
+        refreshPerformanceData();
+      }
+    }
+
+    // Input method switching
+    function switchInputMethod(method) {
+      document.querySelectorAll('.method-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.input-section').forEach(section => section.style.display = 'none');
+      
+      if (method === 'file') {
+        document.querySelector('.method-btn:first-child').classList.add('active');
+        document.getElementById('file-section').style.display = 'block';
+        stopCamera(); // Stop camera if switching to file
+      } else if (method === 'camera') {
+        document.querySelector('.method-btn:last-child').classList.add('active');
+        document.getElementById('camera-section').style.display = 'block';
+      }
+    }
+
+    // Settings toggle functions
+    function toggleGradCAM() {
+      settings.gradcamEnabled = !settings.gradcamEnabled;
+      const toggle = document.getElementById('gradcam-toggle');
+      const status = document.getElementById('gradcam-status');
+      
+      toggle.classList.toggle('active', settings.gradcamEnabled);
+      status.textContent = settings.gradcamEnabled ? 'เปิด' : 'ปิด';
+      // Hide gradcam tab if disabled
+      if (!settings.gradcamEnabled) {
+        document.getElementById('gradcam-tab').style.display = 'none';
+      } else {
+        if (document.getElementById('gradcam-image').src) {
+          document.getElementById('gradcam-tab').style.display = 'inline-block';
+        }
+      }
+    }
+
+    function toggleMirror() {
+      settings.mirrorEnabled = !settings.mirrorEnabled;
+      const toggle = document.getElementById('mirror-toggle');
+      const status = document.getElementById('mirror-status');
+      
+      toggle.classList.toggle('active', settings.mirrorEnabled);
+      status.textContent = settings.mirrorEnabled ? 'เปิด' : 'ปิด';
+      
+      // Apply mirror effect to video
+      if (camera.video) {
+        camera.video.style.transform = settings.mirrorEnabled ? 'scaleX(-1)' : 'none';
+      }
+    }
+
+    // Camera functions
+    async function startCamera() {
+      try {
+        const constraints = {
+          video: {
+            width: { ideal: 640 },
+            height: { ideal: 480 },
+            facingMode: 'environment' // Try to use back camera on mobile
+          }
+        };
+
+        camera.stream = await navigator.mediaDevices.getUserMedia(constraints);
+        camera.video.srcObject = camera.stream;
+        camera.isActive = true;
+
+        // Show video, hide placeholder
+        document.getElementById('camera-placeholder').style.display = 'none';
+        camera.video.style.display = 'block';
+        camera.canvas.style.display = 'none';
+
+        // Update controls
+        document.getElementById('start-camera-btn').style.display = 'none';
+        document.getElementById('stop-camera-btn').style.display = 'inline-block';
+        document.getElementById('capture-btn').disabled = false;
+        document.getElementById('retake-btn').style.display = 'none';
+
+        // Apply mirror if enabled
+        if (settings.mirrorEnabled) {
+          camera.video.style.transform = 'scaleX(-1)';
+        }
+
+        // Reset analysis section
+        document.getElementById('analysis-section').style.display = 'none';
+
+      } catch (error) {
+        console.error('Error accessing camera:', error);
+        alert('ไม่สามารถเข้าถึงกล้องได้: ' + error.message);
+      }
+    }
+
+    function stopCamera() {
+      if (camera.stream) {
+        camera.stream.getTracks().forEach(track => track.stop());
+        camera.stream = null;
+      }
+      
+      camera.isActive = false;
+      
+      // Hide video, show placeholder
+      if (camera.video) camera.video.style.display = 'none';
+      document.getElementById('camera-placeholder').style.display = 'block';
+      if (camera.canvas) camera.canvas.style.display = 'none';
+
+      // Update controls
+      document.getElementById('start-camera-btn').style.display = 'inline-block';
+      document.getElementById('stop-camera-btn').style.display = 'none';
+      document.getElementById('capture-btn').disabled = true;
+      document.getElementById('retake-btn').style.display = 'none';
+
+      // Reset analysis section
+      document.getElementById('analysis-section').style.display = 'none';
+    }
+
+    function captureImage() {
+      if (!camera.isActive) return;
+
+      const video = camera.video;
+      camera.canvas.width = video.videoWidth;
+      camera.canvas.height = video.videoHeight;
+
+      // Draw video frame to canvas
+      // If mirror is on, flip before drawing
+      if (settings.mirrorEnabled) {
+        camera.context.save();
+        camera.context.scale(-1, 1);
+        camera.context.drawImage(video, -video.videoWidth, 0, video.videoWidth, video.videoHeight);
+        camera.context.restore();
+      } else {
+        camera.context.drawImage(video, 0, 0);
+      }
+
+      // Convert to blob and create file
+      camera.canvas.toBlob(blob => {
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+        currentFile = new File([blob], `camera-capture-${timestamp}.jpg`, { type: 'image/jpeg' });
+        
+        // Show analysis section
+        setupImageForAnalysis(camera.canvas.toDataURL(), currentFile.name, blob.size);
+        
+        // Hide video, show canvas
+        camera.video.style.display = 'none';
+        camera.canvas.style.display = 'block';
+        
+        // Update controls
+        document.getElementById('capture-btn').disabled = true;
+        document.getElementById('retake-btn').style.display = 'inline-block';
+        
+      }, 'image/jpeg', 0.8);
+    }
+
+    function retakeImage() {
+      // Show video, hide canvas
+      camera.video.style.display = 'block';
+      camera.canvas.style.display = 'none';
+      
+      // Update controls
+      document.getElementById('capture-btn').disabled = false;
+      document.getElementById('retake-btn').style.display = 'none';
+      
+      // Reset analysis
+      currentFile = null;
+      document.getElementById('analysis-section').style.display = 'none';
+    }
+
+    // Image view switching
+    function switchImageView(view) {
+      document.querySelectorAll('.image-tab').forEach(tab => tab.classList.remove('active'));
+      
+      const originalImg = document.getElementById('original-image');
+      const gradcamImg = document.getElementById('gradcam-image');
+      
+      if (view === 'original') {
+        document.querySelector('.image-tab:first-child').classList.add('active');
+        originalImg.style.display = 'block';
+        gradcamImg.style.display = 'none';
+      } else if (view === 'gradcam') {
+        document.querySelector('.image-tab:last-child').classList.add('active');
+        originalImg.style.display = 'none';
+        gradcamImg.style.display = 'block';
+      }
+    }
+
+    // File handling functions
+    function setFile(file) {
+      if (!file) return;
+      currentFile = file;
+      
+      const reader = new FileReader();
+      reader.onload = e => {
+        setupImageForAnalysis(e.target.result, file.name, file.size);
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function setupImageForAnalysis(imageSrc, fileName, fileSize) {
+      // Update image displays
+      document.getElementById('original-image').src = imageSrc;
+      document.getElementById('gradcam-image').style.display = 'none';
+      document.getElementById('gradcam-tab').style.display = 'none';
+      
+      // Update file info
+      document.getElementById('file-name').textContent = fileName;
+      document.getElementById('file-size').textContent = formatFileSize(fileSize);
+      document.getElementById('file-status').textContent = 'พร้อมทำนาย';
+      document.getElementById('file-status').className = 'status success';
+      
+      // Show analysis section and enable predict button
+      document.getElementById('analysis-section').style.display = 'grid';
+      document.getElementById('predict-btn').disabled = false;
+      
+      // Reset results
+      document.getElementById('prediction-results').innerHTML = '<p style="opacity: 0.7; text-align: center;">กดปุ่ม "ทำนาย" เพื่อเริ่มวิเคราะห์</p>';
+      document.getElementById('timing-info').style.display = 'none';
+    }
+
+    function formatFileSize(bytes) {
+      if (bytes === 0) return '0 Bytes';
+      const k = 1024;
+      const sizes = ['Bytes', 'KB', 'MB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    // Drag & drop functionality
+    function setupDragDrop() {
+      const dropzone = document.getElementById('dropzone');
+      const fileInput = document.getElementById('file-input');
+
+      dropzone.addEventListener('click', () => fileInput.click());
+      fileInput.addEventListener('change', (e) => setFile(e.target.files[0]));
+
+      ['dragenter', 'dragover'].forEach(evt => {
+        dropzone.addEventListener(evt, (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropzone.classList.add('dragover');
+        });
+      });
+
+      ['dragleave', 'drop'].forEach(evt => {
+        dropzone.addEventListener(evt, (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropzone.classList.remove('dragover');
+        });
+      });
+
+      dropzone.addEventListener('drop', (e) => {
+        const files = e.dataTransfer.files;
+        if (files.length > 0) setFile(files[0]);
+      });
+    }
+
+    // Prediction function
+    async function predict() {
+      if (!currentFile) return;
+      
+      const predictBtn = document.getElementById('predict-btn');
+      const predictionResults = document.getElementById('prediction-results');
+      const timingInfo = document.getElementById('timing-info');
+      
+      predictBtn.disabled = true;
+      predictBtn.innerHTML = '<span class="loading"></span> กำลังทำนาย...';
+      predictionResults.innerHTML = '<p style="opacity: 0.7; text-align: center;"><span class="loading"></span> กำลังวิเคราะห์รูปภาพ...</p>';
+
+      try {
+        const formData = new FormData();
+        formData.append('file', currentFile);
+        formData.append('enable_gradcam', settings.gradcamEnabled ? 'true' : 'false');
+
+        const response = await fetch('/predict', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.error || 'เกิดข้อผิดพลาดจากเซิร์ฟเวอร์');
+        }
+
+        // Display results
+        renderPredictionResults(data);
+        renderTimingInfo(data);
+        
+        // Show Grad-CAM if available
+        if (data.gradcam_image && settings.gradcamEnabled) {
+          document.getElementById('gradcam-image').src = data.gradcam_image;
+          document.getElementById('gradcam-tab').style.display = 'inline-block';
+        } else {
+          document.getElementById('gradcam-tab').style.display = 'none';
+        }
+
+      } catch (error) {
+        predictionResults.innerHTML = `
+          <div class="error-log">
+            <div class="error-time">${new Date().toLocaleString('th-TH')}</div>
+            <div class="error-msg">❌ ${escapeHtml(error.message)}</div>
+          </div>
+        `;
+        timingInfo.style.display = 'none';
+      } finally {
+        predictBtn.disabled = false;
+        predictBtn.innerHTML = '🚀 ทำนาย';
+      }
+    }
+
+    function renderPredictionResults(data) {
+      const predictionResults = document.getElementById('prediction-results');
+      
+      if (!data.topk || !Array.isArray(data.topk)) {
+        predictionResults.innerHTML = '<p>ไม่มีผลลัพธ์</p>';
+        return;
+      }
+
+      const rows = data.topk.map(item => {
+        const percentage = (item.prob * 100).toFixed(2);
+        return `
+          <div class="prediction-row">
+            <div class="prediction-label">${escapeHtml(item.label)}</div>
+            <div class="prob-bar"><i style="width: ${percentage}%"></i></div>
+            <div class="prob-percent">${percentage}%</div>
+          </div>
+        `;
+      }).join('');
+
+      predictionResults.innerHTML = rows;
+
+      // Animate progress bars
+      setTimeout(() => {
+        document.querySelectorAll('.prob-bar > i').forEach(bar => {
+          const width = bar.style.width;
+          bar.style.width = '0%';
+          setTimeout(() => bar.style.width = width, 100);
+        });
+      }, 50);
+    }
+
+    function renderTimingInfo(data) {
+      const timingInfo = document.getElementById('timing-info');
+      const totalTimeEl = document.getElementById('total-time');
+      const preprocessEl = document.getElementById('preprocess-time');
+      const inferenceEl = document.getElementById('inference-time');
+      const gradcamRow = document.getElementById('gradcam-timing');
+      const gradcamEl = document.getElementById('gradcam-time');
+
+      // Response uses keys: latency_ms, inference_time_ms, preprocessing_time_ms, gradcam_time_ms
+      const total = data.latency_ms ?? '-';
+      const preprocess = data.preprocessing_time_ms ?? '-';
+      const inference = data.inference_time_ms ?? '-';
+      const gradcam = data.gradcam_time_ms ?? 0;
+
+      totalTimeEl.textContent = typeof total === 'number' ? `${total} ms` : total;
+      preprocessEl.textContent = typeof preprocess === 'number' ? `${preprocess} ms` : preprocess;
+      inferenceEl.textContent = typeof inference === 'number' ? `${inference} ms` : inference;
+
+      if (settings.gradcamEnabled && gradcam > 0) {
+        gradcamRow.style.display = 'flex';
+        gradcamEl.textContent = `${gradcam} ms`;
+      } else {
+        gradcamRow.style.display = 'none';
+      }
+
+      timingInfo.style.display = 'block';
+    }
+
+    // Performance data fetch & render
+    async function refreshPerformanceData() {
+      try {
+        const resp = await fetch('/performance');
+        const data = await resp.json();
+
+        if (!resp.ok) {
+          console.warn('Failed to fetch performance:', data);
+          return;
+        }
+
+        performanceData = data;
+        updatePerformanceUI(data);
+        renderErrorLogs(data.recent_errors || []);
+        renderSystemMetrics(data.system_metrics || []);
+        renderClassDistribution(data.class_distribution || {});
+      } catch (err) {
+        console.error('Error fetching performance:', err);
+      }
+    }
+
+    function updatePerformanceUI(data) {
+      if (!data || data.status !== 'ok') {
+        document.getElementById('total-predictions').textContent = data.total_predictions ?? '-';
+        document.getElementById('avg-latency').textContent = data.avg_latency_ms ?? '-';
+        document.getElementById('success-rate').textContent = data.successful_predictions && data.total_predictions ? ((data.successful_predictions / data.total_predictions) * 100).toFixed(1) : (data.error_rate ? (100 - data.error_rate).toFixed(1) : '-');
+        document.getElementById('avg-confidence').textContent = data.avg_confidence ? `${(data.avg_confidence * 100).toFixed(1)}%` : '-';
+        document.getElementById('avg-gradcam-time').textContent = data.avg_gradcam_time_ms ?? '-';
+        document.getElementById('min-latency').textContent = data.min_latency_ms ?? '-';
+        document.getElementById('max-latency').textContent = data.max_latency_ms ?? '-';
+        document.getElementById('error-rate').textContent = (data.error_rate !== undefined) ? data.error_rate.toFixed(2) : '-';
+        return;
+      }
+
+      document.getElementById('total-predictions').textContent = data.total_predictions ?? '-';
+      document.getElementById('avg-latency').textContent = (data.avg_latency_ms !== undefined) ? `${Math.round(data.avg_latency_ms)} ms` : '-';
+      document.getElementById('success-rate').textContent = (data.successful_predictions !== undefined && data.total_predictions) ? `${((data.successful_predictions / data.total_predictions) * 100).toFixed(1)}%` : '-';
+      document.getElementById('avg-confidence').textContent = (data.avg_confidence !== undefined) ? `${(data.avg_confidence * 100).toFixed(1)}%` : '-';
+      document.getElementById('avg-gradcam-time').textContent = (data.avg_gradcam_time_ms !== undefined) ? `${Math.round(data.avg_gradcam_time_ms)} ms` : '-';
+      document.getElementById('min-latency').textContent = data.min_latency_ms ?? '-';
+      document.getElementById('max-latency').textContent = data.max_latency_ms ?? '-';
+      document.getElementById('error-rate').textContent = (data.error_rate !== undefined) ? `${data.error_rate.toFixed(2)}` : '-';
+    }
+
+    function renderClassDistribution(dist) {
+      const container = document.getElementById('class-distribution');
+      const keys = Object.keys(dist || {});
+      if (!keys.length) {
+        container.innerHTML = '<p style="opacity: 0.7; text-align: center;">No data</p>';
+        return;
+      }
+
+      const total = keys.reduce((s, k) => s + (dist[k] || 0), 0) || 1;
+      container.innerHTML = keys.map(k => {
+        const v = dist[k] || 0;
+        const pct = ((v / total) * 100).toFixed(1);
+        return `<div class="class-item"><div>${escapeHtml(k)}</div><div style="min-width: 120px; display:flex; gap:8px; align-items:center;"><div style="flex:1; height:12px; background:#253046; border-radius:6px; overflow:hidden;"><i style="display:block; height:100%; width:${pct}%; background:linear-gradient(90deg,#22c55e,#16a34a);"></i></div><div style="width:48px; text-align:right; color:#22c55e;">${pct}%</div></div></div>`;
+      }).join('');
+    }
+
+    function renderErrorLogs(errors) {
+      const container = document.getElementById('error-logs');
+      if (!errors || errors.length === 0) {
+        container.innerHTML = '<p style="opacity: 0.7; text-align: center;">No errors to display</p>';
+        return;
+      }
+      container.innerHTML = errors.slice().reverse().map(e => {
+        const time = e.timestamp || new Date().toISOString();
+        const msg = e.error || e.message || JSON.stringify(e);
+        return `<div class="error-log"><div class="error-time">${escapeHtml(new Date(time).toLocaleString('th-TH'))}</div><div class="error-msg">❌ ${escapeHtml(msg)}</div></div>`;
+      }).join('');
+    }
+
+    function renderSystemMetrics(metrics) {
+      const container = document.getElementById('system-metrics');
+      if (!metrics || metrics.length === 0) {
+        container.innerHTML = '<p style="opacity: 0.7; text-align: center;">No system metrics</p>';
+        return;
+      }
+      // show last 10 metrics
+      container.innerHTML = metrics.slice().reverse().map(m => {
+        const time = m.timestamp ? new Date(m.timestamp).toLocaleString('th-TH') : '-';
+        const cpu = m.cpu_percent !== undefined ? `${m.cpu_percent}%` : '-';
+        const mem = m.memory_percent !== undefined ? `${m.memory_percent}%` : '-';
+        const used = m.memory_used_gb !== undefined ? `${m.memory_used_gb.toFixed(2)} GB` : '-';
+        return `<div style="padding:8px 0; border-bottom:1px dashed #334155;"><div style="font-size:12px;color:#94a3b8;">${escapeHtml(time)}</div><div style="margin-top:6px;">CPU: <strong>${escapeHtml(cpu)}</strong> &nbsp; | &nbsp; Mem: <strong>${escapeHtml(mem)}</strong> (${escapeHtml(used)})</div></div>`;
+      }).join('');
+    }
+
+    // Utility: escape HTML
+    function escapeHtml(unsafe) {
+      if (unsafe === null || unsafe === undefined) return '';
+      return String(unsafe)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    // Initialize UI on load
+    document.addEventListener('DOMContentLoaded', () => {
+      setupDragDrop();
+      initializeCamera();
+
+      // If user clicks outside, ensure camera stops when switching to file
+      document.querySelectorAll('.method-btn').forEach(btn => btn.addEventListener('click', () => {
+        // small delay to allow switch
+        setTimeout(() => {
+          if (document.querySelector('.method-btn:first-child').classList.contains('active')) {
+            stopCamera();
+          }
+        }, 50);
+      }));
+
+      // Auto refresh performance every 10 seconds when that tab is active
+      setInterval(() => {
+        const perfTabActive = document.getElementById('performance-panel').classList.contains('active');
+        if (perfTabActive) refreshPerformanceData();
+      }, 10000);
+    });
+  </script>
+</body>
+</html>
