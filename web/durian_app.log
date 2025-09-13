@@ -1092,3 +1092,32 @@
 2025-09-08 20:39:19,428 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:39:19] "POST /predict HTTP/1.1" 200 -
 2025-09-08 20:39:21,062 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:39:21] "GET /performance HTTP/1.1" 200 -
 2025-09-08 20:39:29,059 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 20:39:29] "GET /performance HTTP/1.1" 200 -
+2025-09-13 16:19:20,760 - __main__ - INFO - Grad-CAM target layer: layer4.2.conv3
+2025-09-13 16:19:20,797 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.137:5000
+2025-09-13 16:19:20,798 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 16:19:20,800 - werkzeug - INFO -  * Restarting with stat
+2025-09-13 16:19:29,180 - __main__ - INFO - Grad-CAM target layer: layer4.2.conv3
+2025-09-13 16:19:29,195 - werkzeug - WARNING -  * Debugger is active!
+2025-09-13 16:19:29,202 - werkzeug - INFO -  * Debugger PIN: 744-961-445
+2025-09-13 16:19:29,427 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:19:29] "GET / HTTP/1.1" 200 -
+2025-09-13 16:19:29,587 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:19:29] "GET /debug HTTP/1.1" 200 -
+2025-09-13 16:19:29,588 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:19:29] "GET /performance HTTP/1.1" 200 -
+2025-09-13 16:19:29,887 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:19:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-13 16:19:37,591 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:19:37] "GET /performance HTTP/1.1" 200 -
+2025-09-13 16:19:40,107 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:19:40] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-13 16:19:40,124 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:19:40] "GET /debug HTTP/1.1" 200 -
+2025-09-13 16:19:40,132 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:19:40] "GET /performance HTTP/1.1" 200 -
+2025-09-13 16:19:46,931 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-13 16:19:46,940 - __main__ - INFO - Generated base64 image, size: 47824 bytes
+2025-09-13 16:19:46,956 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:19:46] "POST /predict HTTP/1.1" 200 -
+2025-09-13 16:19:48,121 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:19:48] "GET /performance HTTP/1.1" 200 -
+2025-09-13 16:19:55,059 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-13 16:19:55,067 - __main__ - INFO - Generated base64 image, size: 115104 bytes
+2025-09-13 16:19:55,079 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:19:55] "POST /predict HTTP/1.1" 200 -
+2025-09-13 16:19:56,132 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:19:56] "GET /performance HTTP/1.1" 200 -
+2025-09-13 16:20:04,929 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:20:04] "GET /performance HTTP/1.1" 200 -
+2025-09-13 16:20:12,928 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:20:12] "GET /performance HTTP/1.1" 200 -
+2025-09-13 16:20:20,930 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:20:20] "GET /performance HTTP/1.1" 200 -
