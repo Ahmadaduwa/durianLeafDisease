@@ -1,0 +1,15 @@
+2025-09-14 17:15:53,033 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.141:5000
+2025-09-14 17:15:53,033 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-14 17:15:53,035 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 17:15:56,953 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 17:15:56,958 - werkzeug - INFO -  * Debugger PIN: 326-850-286
+2025-09-14 17:16:00,445 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:16:00] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:16:01,381 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:16:01] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:16:02,251 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:16:02] "GET / HTTP/1.1" 200 -
+2025-09-14 17:16:02,269 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:16:02] "GET /debug HTTP/1.1" 200 -
+2025-09-14 17:16:02,271 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:16:02] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:16:10,277 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:16:10] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:16:12,290 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:16:12] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -

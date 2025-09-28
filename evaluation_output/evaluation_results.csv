@@ -1,0 +1,73 @@
+model,accuracy,precision_macro,recall_macro,f1_macro,classification_report,confusion_matrix
+model1,0.9722222222222222,0.9721244105190688,0.9715781335507959,0.9717968853895803,"                     precision    recall  f1-score   support
+
+    ALGAL_LEAF_SPOT       0.97      0.96      0.97       101
+ALLOCARIDARA_ATTACK       0.97      0.98      0.98       126
+       HEALTHY_LEAF       0.97      0.99      0.98       135
+        LEAF_BLIGHT       0.98      0.96      0.97       129
+PHOMOPSIS_LEAF_SPOT       0.97      0.97      0.97       121
+
+           accuracy                           0.97       612
+          macro avg       0.97      0.97      0.97       612
+       weighted avg       0.97      0.97      0.97       612
+","[[97, 2, 0, 0, 2], [2, 124, 0, 0, 0], [0, 0, 133, 2, 0], [0, 2, 1, 124, 2], [1, 0, 3, 0, 117]]"
+model2,0.9722222222222222,0.9714296978767296,0.9717627049123919,0.9715021007299367,"                     precision    recall  f1-score   support
+
+    ALGAL_LEAF_SPOT       0.95      0.97      0.96       101
+ALLOCARIDARA_ATTACK       0.98      0.97      0.97       126
+       HEALTHY_LEAF       0.97      0.99      0.98       135
+        LEAF_BLIGHT       1.00      0.97      0.98       129
+PHOMOPSIS_LEAF_SPOT       0.96      0.96      0.96       121
+
+           accuracy                           0.97       612
+          macro avg       0.97      0.97      0.97       612
+       weighted avg       0.97      0.97      0.97       612
+","[[98, 0, 2, 0, 1], [3, 122, 0, 0, 1], [0, 0, 134, 0, 1], [0, 2, 0, 125, 2], [2, 1, 2, 0, 116]]"
+model3,0.9575163398692811,0.9566591670193729,0.9573055781365915,0.956495915972902,"                     precision    recall  f1-score   support
+
+    ALGAL_LEAF_SPOT       0.92      0.96      0.94       101
+ALLOCARIDARA_ATTACK       0.95      0.95      0.95       126
+       HEALTHY_LEAF       0.96      0.99      0.97       135
+        LEAF_BLIGHT       1.00      0.92      0.96       129
+PHOMOPSIS_LEAF_SPOT       0.96      0.96      0.96       121
+
+           accuracy                           0.96       612
+          macro avg       0.96      0.96      0.96       612
+       weighted avg       0.96      0.96      0.96       612
+","[[97, 1, 1, 0, 2], [6, 120, 0, 0, 0], [0, 0, 134, 0, 1], [3, 3, 2, 119, 2], [0, 2, 3, 0, 116]]"
+model4,0.9705882352941176,0.9695471470321632,0.9705060239236447,0.9697361918766019,"                     precision    recall  f1-score   support
+
+    ALGAL_LEAF_SPOT       0.93      0.98      0.95       101
+ALLOCARIDARA_ATTACK       1.00      0.97      0.98       126
+       HEALTHY_LEAF       0.96      0.99      0.97       135
+        LEAF_BLIGHT       0.98      0.98      0.98       129
+PHOMOPSIS_LEAF_SPOT       0.97      0.94      0.96       121
+
+           accuracy                           0.97       612
+          macro avg       0.97      0.97      0.97       612
+       weighted avg       0.97      0.97      0.97       612
+","[[99, 0, 1, 0, 1], [3, 122, 1, 0, 0], [0, 0, 133, 1, 1], [1, 0, 1, 126, 1], [4, 0, 2, 1, 114]]"
+model5,0.9754901960784313,0.9740390441736307,0.9759265041575134,0.9746093601674815,"                     precision    recall  f1-score   support
+
+    ALGAL_LEAF_SPOT       0.92      0.99      0.95       101
+ALLOCARIDARA_ATTACK       1.00      0.96      0.98       126
+       HEALTHY_LEAF       0.99      0.98      0.98       135
+        LEAF_BLIGHT       0.98      0.98      0.98       129
+PHOMOPSIS_LEAF_SPOT       0.98      0.97      0.97       121
+
+           accuracy                           0.98       612
+          macro avg       0.97      0.98      0.97       612
+       weighted avg       0.98      0.98      0.98       612
+","[[100, 0, 1, 0, 0], [5, 121, 0, 0, 0], [0, 0, 132, 2, 1], [1, 0, 0, 127, 1], [3, 0, 1, 0, 117]]"
+ensemble_avg,0.9771241830065359,0.9761483108619906,0.9769461830910766,0.9763918719815301,"                     precision    recall  f1-score   support
+
+    ALGAL_LEAF_SPOT       0.94      0.98      0.96       101
+ALLOCARIDARA_ATTACK       0.99      0.97      0.98       126
+       HEALTHY_LEAF       0.97      0.99      0.98       135
+        LEAF_BLIGHT       1.00      0.98      0.99       129
+PHOMOPSIS_LEAF_SPOT       0.97      0.97      0.97       121
+
+           accuracy                           0.98       612
+          macro avg       0.98      0.98      0.98       612
+       weighted avg       0.98      0.98      0.98       612
+","[[99, 0, 1, 0, 1], [4, 122, 0, 0, 0], [0, 0, 134, 0, 1], [0, 1, 1, 126, 1], [2, 0, 2, 0, 117]]"

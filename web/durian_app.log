@@ -1121,3 +1121,82 @@
 2025-09-13 16:20:04,929 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:20:04] "GET /performance HTTP/1.1" 200 -
 2025-09-13 16:20:12,928 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:20:12] "GET /performance HTTP/1.1" 200 -
 2025-09-13 16:20:20,930 - werkzeug - INFO - 192.168.10.137 - - [13/Sep/2025 16:20:20] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:14:10,535 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.141:5000
+2025-09-14 17:14:10,536 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-14 17:14:10,539 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 17:14:14,537 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 17:14:14,554 - werkzeug - INFO -  * Debugger PIN: 326-850-286
+2025-09-14 17:14:28,119 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:14:28] "GET / HTTP/1.1" 200 -
+2025-09-14 17:14:28,280 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:14:28] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:14:28,280 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:14:28] "GET /debug HTTP/1.1" 200 -
+2025-09-14 17:14:30,300 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:14:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-14 17:14:31,877 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:14:31] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-14 17:14:31,894 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:14:31] "GET /debug HTTP/1.1" 200 -
+2025-09-14 17:14:31,895 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:14:31] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:14:39,902 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:14:39] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:14:47,896 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:14:47] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:14:55,893 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:14:55] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:14:56,322 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:14:56] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-09-14 17:14:57,889 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:14:57] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-09-14 17:15:03,902 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:15:03] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:15:11,332 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:15:11] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-09-14 17:15:12,074 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:15:12] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:15:13,355 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:15:13] "[36mGET / HTTP/1.1[0m" 304 -
+2025-09-14 17:15:13,379 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:15:13] "GET /debug HTTP/1.1" 200 -
+2025-09-14 17:15:13,379 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:15:13] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:15:26,098 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.141:5000
+2025-09-14 17:15:26,099 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-14 17:15:26,102 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 17:15:29,385 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 17:15:29,390 - werkzeug - INFO -  * Debugger PIN: 326-850-286
+2025-09-14 17:15:32,795 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:15:32] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:15:37,926 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:15:37] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:17:20,278 - __main__ - INFO - Grad-CAM target layer: layer4.2.conv3
+2025-09-14 17:17:20,308 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.141:5000
+2025-09-14 17:17:20,308 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-14 17:17:20,311 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 17:17:28,480 - __main__ - INFO - Grad-CAM target layer: layer4.2.conv3
+2025-09-14 17:17:28,492 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 17:17:28,498 - werkzeug - INFO -  * Debugger PIN: 450-965-272
+2025-09-14 17:17:30,543 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:17:30] "GET / HTTP/1.1" 200 -
+2025-09-14 17:17:30,662 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:17:30] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:17:30,665 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:17:30] "GET /debug HTTP/1.1" 200 -
+2025-09-14 17:17:38,920 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:17:38] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:17:46,920 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:17:46] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:17:54,933 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:17:54] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:18:02,663 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:18:02] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:18:10,665 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:18:10] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:18:11,678 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-14 17:18:11,685 - __main__ - INFO - Generated base64 image, size: 105948 bytes
+2025-09-14 17:18:11,697 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:18:11] "POST /predict HTTP/1.1" 200 -
+2025-09-14 17:18:18,665 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:18:18] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:18:26,660 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:18:26] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:18:29,453 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-14 17:18:29,458 - __main__ - INFO - Generated base64 image, size: 104116 bytes
+2025-09-14 17:18:29,466 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:18:29] "POST /predict HTTP/1.1" 200 -
+2025-09-14 17:18:34,661 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:18:34] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:18:42,661 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:18:42] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:18:46,071 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-14 17:18:46,077 - __main__ - INFO - Generated base64 image, size: 115364 bytes
+2025-09-14 17:18:46,087 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:18:46] "POST /predict HTTP/1.1" 200 -
+2025-09-14 17:18:50,662 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:18:50] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:18:58,667 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:18:58] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:19:06,924 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:19:06] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:19:14,664 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:19:14] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:19:22,663 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:19:22] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:19:29,741 - __main__ - INFO - Grad-CAM image shape: (224, 224, 3)
+2025-09-14 17:19:29,745 - __main__ - INFO - Generated base64 image, size: 57600 bytes
+2025-09-14 17:19:29,755 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:19:29] "POST /predict HTTP/1.1" 200 -
+2025-09-14 17:19:30,664 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:19:30] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:19:38,663 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:19:38] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:19:46,664 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:19:46] "GET /performance HTTP/1.1" 200 -
+2025-09-14 17:19:54,934 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 17:19:54] "GET /performance HTTP/1.1" 200 -
